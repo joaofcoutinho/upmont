@@ -166,7 +166,7 @@ export default function VertManguinhosPage() {
       <section className="relative min-h-screen overflow-hidden pt-24">
         <div className="absolute inset-0">
           <img
-            src="/images/design-mode/Sem%20nome%20%281920%20x%201080%20px%29%20%285%29(1).png"
+            src="/images/design-mode/vert-manguinhos-hero.png"
             alt="Vert Manguinhos"
             className="w-full h-full object-cover"
           />
@@ -313,7 +313,7 @@ export default function VertManguinhosPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
-            src="/images/design-mode/Design%20sem%20nome%20-%202025-10-29T153349.273.png"
+            src="/images/design-mode/verthouses-concept.png"
             alt=""
             className="w-full h-full object-cover"
           />

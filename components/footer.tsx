@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <div className="mb-8 group">
               <Image
-                src="/images/design-mode/Design%20sem%20nome%20-%202025-10-16T164041.349.png"
+                src="/images/design-mode/logo-upmont.png"
                 alt="UPMONT Incorporadora"
                 width={180}
                 height={54}

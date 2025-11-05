@@ -6,7 +6,7 @@ export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const backgroundImages = [
-    "/1-slide-eleve-seu-padrao-de-viver.png",
+    "/upstudios-manguinhos-hero.png",
     "/modern-building-exterior-blue-sky.png",
     "/3-slide-verthouses-manguinhos.png",
   ]
@@ -72,7 +72,8 @@ export function HeroSection() {
             alt="UPMONT Building"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: index === 1 ? "center 80%" : "center 65%",
+              objectPosition: index === 0 ? "center 15%" : index === 1 ? "center 80%" : "center 65%",
+              transform: index === 0 ? "scaleX(-1)" : "none",
             }}
           />
         </div>

@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`font-sans ${montserrat.variable}`}>
+      <body className={`font-sans ${montserrat.variable}`} suppressHydrationWarning>
         {children}
         <Analytics />
       </body>
