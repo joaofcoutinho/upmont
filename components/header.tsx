@@ -76,11 +76,18 @@ export function Header() {
         <nav className="hidden lg:flex items-center justify-center py-4 text-sm tracking-widest font-medium">
           <div className="flex items-center gap-12">
             <Link
+              href="/"
+              className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
+            >
+              INÍCIO
+              <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
+            </Link>
+
+            <Link
               href="/quem-somos"
               className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
             >
               QUEM SOMOS
-              <span className="absolute bottom-[-16px] left-0 w-full h-0.5 bg-gradient-to-r from-[#c9a961] via-[#c9a961] to-transparent shadow-[0_0_8px_rgba(201,169,97,0.6)]"></span>
               <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
             </Link>
 
@@ -135,6 +142,9 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-[#c9a961]/20">
             <nav className="flex flex-col gap-4 text-sm">
+              <Link href="/" className="text-white hover:text-[#c9a961] transition-colors">
+                INÍCIO
+              </Link>
               <Link href="/quem-somos" className="text-white hover:text-[#c9a961] transition-colors">
                 QUEM SOMOS
               </Link>

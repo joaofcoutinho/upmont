@@ -57,11 +57,15 @@ export function PropertySlider() {
 
   return (
     <section className="relative py-24 bg-black overflow-hidden">
-      {/* Background with subtle gradient overlay */}
-      <div className="absolute inset-0 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#c9a961]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#c9a961]/3 rounded-full blur-3xl" />
+      {/* Background with grid pattern */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       {/* Elegant border accents */}

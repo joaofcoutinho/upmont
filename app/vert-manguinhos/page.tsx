@@ -233,82 +233,6 @@ export default function VertManguinhosPage() {
         </div>
       </section>
 
-      {/* Investment Value Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c9a961]/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#c9a961]/5 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="fade-in-section">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Mais que um Lar, um Investimento Inteligente
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#c9a961] to-transparent mb-8 rounded-full" />
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                O Vert Manguinhos representa uma oportunidade única de investir em qualidade de vida e valorização
-                patrimonial. Um empreendimento que une localização estratégica, acabamento premium e infraestrutura
-                completa.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex gap-4 fade-in-section stagger-1 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Sparkles className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Valorização Garantida</h4>
-                    <p className="text-white/70">Região em constante desenvolvimento e valorização imobiliária</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 fade-in-section stagger-2 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Building2 className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Padrão Construtivo</h4>
-                    <p className="text-white/70">Construção de alto padrão com materiais de primeira linha</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 fade-in-section stagger-3 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Home className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Qualidade de Vida</h4>
-                    <p className="text-white/70">Infraestrutura completa para você e sua família</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative fade-in-section">
-              <div className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-gradient-to-b from-neutral-950/50 to-neutral-900/50 rounded-3xl overflow-hidden border border-[#c9a961]/30 shadow-2xl hover:shadow-[#c9a961]/20 transition-all duration-500 group">
-                {buildingImages.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image || "/placeholder.svg"}
-                    alt={`Vert Manguinhos - Vista ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                      index === currentImageIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                ))}
-                <div className="absolute inset-0" />
-                {/* Carousel Navigation Dots */}
-                <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-                  {buildingImages.map((_, index) => null)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* VertHouses Concept Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -318,6 +242,7 @@ export default function VertManguinhosPage() {
             className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -400,6 +325,86 @@ export default function VertManguinhosPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Value Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/ripado-degrade.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="fade-in-section">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Mais que um Lar, um Investimento Inteligente
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#c9a961] to-transparent mb-8 rounded-full" />
+              <p className="text-lg text-white/80 mb-8 leading-relaxed">
+                O Vert Manguinhos representa uma oportunidade única de investir em qualidade de vida e valorização
+                patrimonial. Um empreendimento que une localização estratégica, acabamento premium e infraestrutura
+                completa.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex gap-4 fade-in-section stagger-1 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Sparkles className="w-8 h-8 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">Valorização Garantida</h4>
+                    <p className="text-white/70">Região em constante desenvolvimento e valorização imobiliária</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 fade-in-section stagger-2 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Building2 className="w-8 h-8 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">Padrão Construtivo</h4>
+                    <p className="text-white/70">Construção de alto padrão com materiais de primeira linha</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 fade-in-section stagger-3 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Home className="w-8 h-8 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">Qualidade de Vida</h4>
+                    <p className="text-white/70">Infraestrutura completa para você e sua família</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative fade-in-section">
+              <div className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-gradient-to-b from-neutral-950/50 to-neutral-900/50 rounded-3xl overflow-hidden border border-[#c9a961]/30 shadow-2xl hover:shadow-[#c9a961]/20 transition-all duration-500 group">
+                {buildingImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image || "/placeholder.svg"}
+                    alt={`Vert Manguinhos - Vista ${index + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                <div className="absolute inset-0" />
+                {/* Carousel Navigation Dots */}
+                <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                  {buildingImages.map((_, index) => null)}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -630,15 +635,14 @@ export default function VertManguinhosPage() {
       </section>
 
       {/* Location & Connectivity Section */}
-      <section className="relative py-24 bg-gradient-to-b from-black to-neutral-950 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
-              backgroundSize: "50px 50px",
-            }}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/jeans2.png"
+            alt="Background"
+            className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -684,12 +688,10 @@ export default function VertManguinhosPage() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center">
-                  <div className="container mx-auto px-4">
-                    <div className="max-w-2xl">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{location.title}</h3>
-                      <p className="text-lg text-white/90 mb-6 leading-relaxed">{location.desc}</p>
-                    </div>
+                <div className="absolute inset-0 flex items-end p-6">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{location.title}</h3>
+                    <p className="text-lg text-white/90 leading-relaxed">{location.desc}</p>
                   </div>
                 </div>
               </div>
@@ -703,23 +705,21 @@ export default function VertManguinhosPage() {
               alt="Vista aérea do bairro"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
-            <div className="absolute inset-0 flex items-center">
-              <div className="container mx-auto px-4">
-                <div className="max-w-2xl">
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Conectado com Toda a Cidade</h3>
-                  <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                    Viva em um bairro que oferece tudo o que você precisa: infraestrutura completa, áreas verdes,
-                    segurança e qualidade de vida.
-                  </p>
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
-                  >
-                    <span className="relative z-10">Ver Localização</span>
-                    <div className="absolute inset-0 shimmer" />
-                  </Button>
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+            <div className="absolute inset-0 flex items-end p-8">
+              <div className="max-w-2xl">
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Conectado com Toda a Cidade</h3>
+                <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                  Viva em um bairro que oferece tudo o que você precisa: infraestrutura completa, áreas verdes,
+                  segurança e qualidade de vida.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
+                >
+                  <span className="relative z-10">Ver Localização</span>
+                  <div className="absolute inset-0 shimmer" />
+                </Button>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@ export function ContactFormSection() {
           backgroundImage: "url('/modern-office-golden-lighting-wood-slats.jpeg')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black/65" />
       </div>
 
       {/* Content */}
