@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Leaf, MapPin, Sparkles, Award } from "lucide-react"
 
 export function ContactFormSection() {
@@ -12,6 +13,7 @@ export function ContactFormSection() {
     nome: "",
     whatsapp: "",
     email: "",
+    unidadeInteresse: "",
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -122,6 +124,28 @@ export function ContactFormSection() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 placeholder:text-white/40 text-white text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
                     />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a961]/0 via-[#c9a961]/5 to-[#c9a961]/0 opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
+                  </div>
+                  <div className="relative group">
+                    <Select
+                      value={formData.unidadeInteresse}
+                      onValueChange={(value) => setFormData({ ...formData, unidadeInteresse: value })}
+                    >
+                      <SelectTrigger className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 text-white/40 text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl data-[state=open]:border-[#c9a961]">
+                        <SelectValue placeholder="UNIDADE DE INTERESSE" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-black/95 backdrop-blur-lg border-[#c9a961]/30">
+                        <SelectItem value="up-studios" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          UP Studios
+                        </SelectItem>
+                        <SelectItem value="verthouses-manguinhos" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          Verthouses Manguinhos
+                        </SelectItem>
+                        <SelectItem value="verthouses-centro" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          Verthouses Centro
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a961]/0 via-[#c9a961]/5 to-[#c9a961]/0 opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
                   </div>
                   <Button

@@ -7,6 +7,7 @@ import { FloorPlanCarousel, floorPlans } from "@/components/floor-plan-carousel"
 import { useEffect, useRef, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 
 export default function VertManguinhosPage() {
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -260,56 +261,74 @@ export default function VertManguinhosPage() {
                 {
                   icon: Wind,
                   title: "Ventilação Cruzada",
-                  desc: "Todos os banheiros com ventilação natural",
+                  desc: "Janelas inteligentes com ventilação cruzada e todos banheiros com ventilação natural",
                   delay: "stagger-1",
                 },
                 {
                   icon: ChefHat,
-                  title: "Cozinha Integrada",
-                  desc: "Cozinha com ilha para maior convivência",
+                  title: "Cozinha Integrada com Ilha",
+                  desc: "Cozinha integrada à sala com ilha para maior amplitude e melhor interação social.",
                   delay: "stagger-2",
                 },
                 {
                   icon: Armchair,
                   title: "Salas Amplas",
-                  desc: "Ambientes espaçosos e integrados",
+                  desc: "Ambientes bem definidos e espaçosos acolhendo mesa para 8 pessoas, sofá grande e poltronas.",
                   delay: "stagger-3",
                 },
                 {
                   icon: Sparkles,
                   title: "Varanda Gourmet",
-                  desc: "Varandas nos quartos e preparadas para hidromassagem",
+                  desc: "com vistas panorâmicas, preparada para pia e churrasqueira elétrica.",
                   delay: "stagger-4",
                 },
                 {
                   icon: Home,
                   title: "Suíte Master Premium",
-                  desc: "Com closet, 2 pias e 2 chuveiros",
+                  desc: "Com closet, 2 chuveiros e duas pias, varanda e espaço para cama king.",
                   delay: "stagger-5",
                 },
                 {
                   icon: MapPin,
                   title: "Vistas Panorâmicas",
-                  desc: "3 unidades por andar com vistas privilegiadas",
+                  desc: "Sem vizinhos, cercado por reservas, vista para o mar e para o Mestre Álvaro",
                   delay: "stagger-6",
                 },
                 {
                   icon: Zap,
                   title: "Carregamento Elétrico",
-                  desc: "Estações de carregamento para todas as unidades",
+                  desc: "Preparação para estações de carro elétrico para todas as unidades",
                   delay: "stagger-1",
                 },
                 {
                   icon: Building2,
                   title: "Interiores Personalizados",
-                  desc: "Acabamentos de alto padrão customizáveis",
+                  desc: "Incluso projeto de interiores completo, customização dos materiais de acabamento. Cada unidade será única!",
                   delay: "stagger-2",
                 },
                 {
                   icon: Car,
                   title: "Vagas Cobertas",
-                  desc: "Maioria das vagas soltas e cobertas com store boxes",
+                  desc: "2 ou 3 vagas de garagem, sendo a maioria cobertas",
                   delay: "stagger-3",
+                },
+                {
+                  icon: Sparkles,
+                  title: "Preparação Hidromassagem",
+                  desc: "Preparação para hidromassagem ou ofurô na varanda da suíte master",
+                  delay: "stagger-4",
+                },
+                {
+                  icon: Home,
+                  title: "Unidades Gardens",
+                  desc: "amplas áreas descobertas, preparadas para piscinas privativas e firepit",
+                  delay: "stagger-5",
+                },
+                {
+                  icon: Building2,
+                  title: "Box Locker Privativos",
+                  desc: "ambientes com portas, nas garagens, para todas unidades",
+                  delay: "stagger-6",
                 },
               ].map((feature, index) => (
                 <div
@@ -344,45 +363,51 @@ export default function VertManguinhosPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="fade-in-section">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Mais que um Lar, um Investimento Inteligente
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
+                3 e 4 Suítes
+                <br />
+                160,00 a 190,00 m²
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#c9a961] to-transparent mb-8 rounded-full" />
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                O Vert Manguinhos representa uma oportunidade única de investir em qualidade de vida e valorização
-                patrimonial. Um empreendimento que une localização estratégica, acabamento premium e infraestrutura
-                completa.
-              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#c9a961] to-transparent mb-12 rounded-full" />
 
-              <div className="space-y-6">
-                <div className="flex gap-4 fade-in-section stagger-1 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Sparkles className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Valorização Garantida</h4>
-                    <p className="text-white/70">Região em constante desenvolvimento e valorização imobiliária</p>
-                  </div>
+              <div className="space-y-6 text-white/90 text-lg leading-relaxed">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-[#c9a961] rounded-full mt-2 flex-shrink-0" />
+                  <p>
+                    <span className="font-bold text-white">Térreo:</span> 15 lojas, áreas comuns e recreativas do condomínio.
+                  </p>
                 </div>
 
-                <div className="flex gap-4 fade-in-section stagger-2 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Building2 className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Padrão Construtivo</h4>
-                    <p className="text-white/70">Construção de alto padrão com materiais de primeira linha</p>
-                  </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-[#c9a961] rounded-full mt-2 flex-shrink-0" />
+                  <p>
+                    <span className="font-bold text-white">2º e 3º Pavimentos:</span> garagens e box privativos.
+                  </p>
                 </div>
 
-                <div className="flex gap-4 fade-in-section stagger-3 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a961] to-[#b89851] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Home className="w-8 h-8 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-2">Qualidade de Vida</h4>
-                    <p className="text-white/70">Infraestrutura completa para você e sua família</p>
-                  </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-[#c9a961] rounded-full mt-2 flex-shrink-0" />
+                  <p>
+                    <span className="font-bold text-white">4º Pavimento:</span> 3 unidades Gardens, sendo uma de três suítes e duas de 4 suítes.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-[#c9a961] rounded-full mt-2 flex-shrink-0" />
+                  <p>
+                    <span className="font-bold text-white">5º ao 15º Pavimentos:</span> 3 unidades por andar, somando 33 unidades, sendo 11 de 3 suítes e 22 de 4 suítes.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-[#c9a961] rounded-full mt-2 flex-shrink-0" />
+                  <p>
+                    <span className="font-bold text-white">16º Pavimento:</span> unidade cobertura com 4 suítes e área de lazer com piscina aquecida, academia, área gourmet, sauna e churrasqueira gourmet.
+                  </p>
+                </div>
+
+                <div className="pt-8 mt-8 border-t border-[#c9a961]/40">
+                  <p className="text-2xl font-bold text-[#c9a961]">Total: 37 casas suspensas</p>
                 </div>
               </div>
             </div>
@@ -461,7 +486,7 @@ export default function VertManguinhosPage() {
                 alt="Espaço Gourmet"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold text-sm">Espaço Gourmet</p>
               </div>
             </div>
@@ -472,7 +497,7 @@ export default function VertManguinhosPage() {
                 alt="Lounge"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold text-sm">Lounge Premium</p>
               </div>
             </div>
@@ -483,7 +508,7 @@ export default function VertManguinhosPage() {
                 alt="Área de convivência"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold text-sm">Convivência</p>
               </div>
             </div>
@@ -494,7 +519,7 @@ export default function VertManguinhosPage() {
                 alt="Mesa de pebolim"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold">Pebolim</p>
               </div>
             </div>
@@ -508,7 +533,7 @@ export default function VertManguinhosPage() {
                 alt="Estúdio de Podcast"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold">Estúdio de Podcast</p>
               </div>
             </div>
@@ -519,7 +544,7 @@ export default function VertManguinhosPage() {
                 alt="Bicicletário"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold">Bicicletário</p>
               </div>
             </div>
@@ -530,7 +555,7 @@ export default function VertManguinhosPage() {
                 alt="Espaço de beleza"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
                 <p className="text-white font-semibold">Espaço de Beleza</p>
               </div>
             </div>
@@ -764,6 +789,7 @@ export default function VertManguinhosPage() {
       </section>
 
       <Footer />
+      <WhatsAppFloatButton />
     </main>
   )
 }

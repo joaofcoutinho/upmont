@@ -2,8 +2,9 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 import { Button } from "@/components/ui/button"
-import { Building2, Users, TrendingUp, Sparkles } from "lucide-react"
+import { Building2, Users, Sparkles, Heart } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 
@@ -214,22 +215,22 @@ export default function QuemSomosPage() {
               {
                 icon: Building2,
                 title: "Qualidade",
-                description: "Compromisso com excelência em cada detalhe dos nossos empreendimentos",
+                description: "Selo de qualidade e excelência do renomado arquiteto capixaba Henrique Gasparini, em conjunto com fornecedores e todos os materiais e insumos de primeira linha.",
               },
               {
                 icon: Users,
                 title: "Parceria",
-                description: "Construindo relacionamentos duradouros com clientes e colaboradores",
+                description: "Construindo relacionamentos duradouros com clientes, fornecedores, investidores e colaboradores.",
               },
               {
                 icon: Sparkles,
-                title: "Inovação",
-                description: "Sempre à frente das tendências e tecnologias do mercado imobiliário",
+                title: "Pioneirismo",
+                description: "Sempre à frente das tendências e tecnologias construtivas e digitais, que valorizam os imóveis e deixam um legado de excelência.",
               },
               {
-                icon: TrendingUp,
-                title: "Crescimento",
-                description: "Gerando valor sustentável para nossos clientes e investidores",
+                icon: Heart,
+                title: "Fé",
+                description: "Honrando ao Criador que tem nos dado vida e esperança, dedicando sempre a Ele tudo que fazemos, em gratidão e obediência à Sua Palavra.",
               },
             ].map((value, index) => (
               <div
@@ -248,6 +249,7 @@ export default function QuemSomosPage() {
       </section>
 
       <Footer />
+      <WhatsAppFloatButton />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -176,6 +177,7 @@ export default function ContatosPage() {
       </section>
 
       <Footer />
+      <WhatsAppFloatButton />
     </main>
   )
 }
