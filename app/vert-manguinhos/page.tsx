@@ -998,7 +998,7 @@ export default function VertManguinhosPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 fade-in-section">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 INTELIGÊNCIA CONSTRUTIVA E TECNOLOGIA AVANÇADA
