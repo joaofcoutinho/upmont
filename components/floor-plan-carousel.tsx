@@ -44,7 +44,7 @@ export const floorPlans = [
     id: 5,
     title: "Térreo - Detalhes",
     area: "Térreo",
-    bedrooms: "Áreas Comuns",
+    bedrooms: "Brinquedoteca, Guarda Volumes, Espaço de Beleza, Sala de Podcast, Delivery, Guarita, Sala de Reuniões, Futmesa, Mini Mercado, Banheiro Masculino e Feminino e Bicicletário",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/T%C3%89RREO%20DETALHES-otMmd9JdEAIQky4AzG8VZZdhP91Jnp.png",
   },
@@ -60,7 +60,7 @@ export const floorPlans = [
     id: 7,
     title: "Mezanino - Detalhes",
     area: "Mezanino",
-    bedrooms: "Área de Lazer",
+    bedrooms: "Mezanino, Lounge, Jogos, Pub, Banheiro, Copa",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MEZANINO%20DETALHES-eDfHc7iAx6UCFgixf18dEl8iTjo6Xz.png",
   },
@@ -68,7 +68,7 @@ export const floorPlans = [
     id: 8,
     title: "Cobertura - Rooftop",
     area: "Cobertura",
-    bedrooms: "Área Gourmet",
+    bedrooms: "Piscina, Salão Gourmet, Deck, Sauna e Academia",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/COBERTURA-GvsODDD4FKAEfEnaZLTjg8nq2NyFOp.png",
   },
 ]
@@ -118,7 +118,7 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
           <img
             src={currentPlan.image || "/placeholder.svg"}
             alt={currentPlan.title}
-            className="w-full h-full object-cover scale-[1.25]"
+            className={`w-full h-full object-cover ${currentPlan.id === 3 ? "scale-[1.5]" : "scale-[1.25]"}`}
           />
 
           {/* Navigation Buttons */}
