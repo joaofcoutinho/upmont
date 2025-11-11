@@ -135,14 +135,14 @@ export function ContactFormSection() {
                         <SelectValue placeholder="UNIDADE DE INTERESSE" />
                       </SelectTrigger>
                       <SelectContent className="bg-black/95 backdrop-blur-lg border-[#c9a961]/30">
-                        <SelectItem value="up-studios" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
-                          UP Studios
+                        <SelectItem value="4-suites" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          4 suítes
                         </SelectItem>
-                        <SelectItem value="verthouses-manguinhos" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
-                          Verthouses Manguinhos
+                        <SelectItem value="3-suites" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          3 suítes
                         </SelectItem>
-                        <SelectItem value="verthouses-centro" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
-                          Verthouses Centro
+                        <SelectItem value="studios" className="text-white hover:bg-[#c9a961]/20 focus:bg-[#c9a961]/20 cursor-pointer">
+                          Studios
                         </SelectItem>
                       </SelectContent>
                     </Select>

@@ -190,6 +190,94 @@ export default function QuemSomosPage() {
         </div>
       </section>
 
+      {/* Henrique Gasparini Section */}
+      <section className="relative py-24 overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-neutral-900 to-black opacity-50" />
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 fade-in-section">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Conceito e projetos com o selo de qualidade da assinatura
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-8 rounded-full" />
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c9a961] to-[#b89851]">
+                Henrique Gasparini
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Texto */}
+              <div className="fade-in-section space-y-6">
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Henrique Gasparini é um arquiteto visionário com mais de vinte e cinco anos de experiência na criação
+                  de espaços que transcendem o conceito tradicional de moradia. Sua abordagem única combina precisão
+                  técnica com profunda sensibilidade humana.
+                </p>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Henrique desenvolveu uma metodologia exclusiva que coloca as pessoas no centro do processo criativo,
+                  resultando em espaços que não apenas impressionam visualmente, mas também abraçam e elevam a
+                  experiência de vida de seus moradores.
+                </p>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Principal referência em arquitetura residencial Premium de Serra, com atuação marcante em todo Estado,
+                  acumulando diversas premiações municipais e estaduais, Henrique Gasparini traz toda sua expertise e
+                  visão inovadora para o mercado vertical, criando um novo conceito de morar bem, agora nas alturas,
+                  nascendo os{" "}
+                  <span className="text-[#c9a961] font-bold">"VertHouses"</span>.
+                </p>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Sua assinatura é sinônimo de qualidade, sofisticação e credibilidade, valores que agora são
+                  transferidos para a UPMONT Incorporadora, nos VertHouses e nos UP Studios.
+                </p>
+              </div>
+
+              {/* Imagem */}
+              <div className="fade-in-section relative">
+                <div className="relative h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
+                  <img
+                    src="/henrique-sozinho.jpeg"
+                    alt="Henrique Gasparini"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+              </div>
+            </div>
+
+            <div className="fade-in-section space-y-6">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center max-w-5xl mx-auto">
+                A UPMONT nasce no momento perfeito, combinando a Experiência consolidada em casas de luxo, credibilidade
+                estabelecida por meio de vasto portifólio com mais de 1000 projetos desenvolvidos entre Boulevard Lagoa,
+                Alphaville Jacuhy, Arquipélago de Manguinhos e demais, e o mercado aquecido e promissor de Serra, que vem
+                cada vez mais se consolidando como principal cidade para expansão qualificada no Espírito Santo.
+              </p>
+
+              <div className="bg-gradient-to-br from-neutral-900/80 to-black/80 backdrop-blur-lg p-8 md:p-12 rounded-2xl border border-[#c9a961]/30 max-w-5xl mx-auto">
+                <p className="text-xl md:text-2xl text-white/90 leading-relaxed italic">
+                  "Nas últimas décadas, com a H Arquitetura, contribuí para que o município de Serra se tornasse
+                  referência em casas de Alto Padrão para todo Estado do ES. Agora com a UPMONT Incorporadora, vamos
+                  avançar nessa transição para a Verticalização, no mesmo nível de qualidade e inovação. Serra está pronta
+                  e anseia por esse movimento, nós merecemos essa revolução dos VertHouses! Vamos juntos !!!!"
+                </p>
+                <p className="text-[#c9a961] font-bold text-xl md:text-2xl mt-6 text-right">
+                  - Henrique Gasparini
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Nossos Valores Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
@@ -244,6 +332,73 @@ export default function QuemSomosPage() {
                 <p className="text-white/70 leading-relaxed">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Palavra de Confirmação Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/jeans2.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Imagem */}
+              <div className="fade-in-section relative order-2 lg:order-1">
+                <div className="relative h-[600px] md:h-[800px] lg:h-[1000px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
+                  <img
+                    src="/henrique-esposa.jpeg"
+                    alt="Henrique Gasparini e Esposa"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                </div>
+              </div>
+
+              {/* Texto */}
+              <div className="fade-in-section space-y-6 order-1 lg:order-2">
+                <div className="bg-gradient-to-br from-neutral-900/90 to-black/90 backdrop-blur-lg p-8 md:p-10 rounded-2xl border border-[#c9a961]/30">
+                  <p className="text-lg md:text-xl text-white/90 leading-relaxed italic mb-4">
+                    "Nos últimos dias acontecerá que o monte da casa do Senhor será estabelecido no cume dos montes, e se
+                    Elevará sobre os outeiros, e para ele se afluirão todos os povos. Irão muitas nações e dirão: Vinde, e
+                    subamos ao monte do Senhor, e à casa do Deus de Jacó, para que nos ensine os seus caminhos, e andemos
+                    pelas suas veredas, porque de Sião sairá a lei, e a palavra do Senhor de Jerusalém."
+                  </p>
+                  <p className="text-[#c9a961] font-bold text-lg md:text-xl text-right">- Isaías 2:2-3</p>
+                </div>
+
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Essa foi a Palavra que o Senhor trouxe como confirmação dessa missão, enquanto orávamos pelos
+                  empreendimentos, e não tivemos dúvida de que esse propósito não era nosso, que já havia nascido no
+                  coração de Deus, e o nome foi confirmado e estabelecido:{" "}
+                  <span className="text-[#c9a961] font-bold">UPMONT</span>.
+                </p>
+
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  É um comando de Deus ao qual buscamos obedecer todos os dias, elevando nossos corações, pensamentos,
+                  atitudes, sempre olhando para o alto, subindo a montanha do Senhor, descalçando os pés e nos derramando
+                  em sua presença. Buscando direção em tudo que fazemos e em cada empreendimento que desenvolvemos.
+                </p>
+
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Esse é o convite, vinde e subamos ao monte do Senhor e à casa do Deus de Jacó.{" "}
+                  <span className="text-[#c9a961] font-bold">Vamos juntos !!!!</span>
+                </p>
+
+                <div className="pt-6 border-t border-[#c9a961]/30">
+                  <p className="text-xl md:text-2xl text-[#c9a961] font-bold leading-relaxed text-center">
+                    A UPMONT e todos os seus empreendimentos pertencem ao Senhor Jesus e por Ele são abençoados.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

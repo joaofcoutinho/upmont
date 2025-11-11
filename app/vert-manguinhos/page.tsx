@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Home, Car, MapPin, Building2, ShoppingCart, Sparkles, Wind, ChefHat, Armchair, Zap } from "lucide-react"
+import { Home, Car, MapPin, Building2, ShoppingCart, Sparkles, Wind, ChefHat, Armchair, Zap, Package, Lock, Bike, Wrench, Sun, Droplet, PawPrint } from "lucide-react"
 import Link from "next/link"
 import { FloorPlanCarousel, floorPlans } from "@/components/floor-plan-carousel"
 import { useEffect, useRef, useState } from "react"
@@ -21,6 +21,7 @@ export default function VertManguinhosPage() {
   ]
 
   const [currentFloorPlanIndex, setCurrentFloorPlanIndex] = useState(0)
+  const [selectedAmenity, setSelectedAmenity] = useState(0)
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -659,6 +660,387 @@ export default function VertManguinhosPage() {
         </div>
       </section>
 
+      {/* Amenidades Interativas Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/jeans2.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 fade-in-section">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Amenidades de Alto Padrão
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-8 rounded-full" />
+              <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+                Cada detalhe foi pensado para você escolher como quer aproveitar o seu tempo
+              </p>
+            </div>
+
+            {/* Amenity Buttons */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12 fade-in-section">
+              {[
+                {
+                  icon: Package,
+                  title: "MINIMERCADO Autônomo",
+                  shortTitle: "Minimercado",
+                  image: "/amenities/minimercado.jpg",
+                },
+                {
+                  icon: Package,
+                  title: "Delivery Box Com Refrigeradores",
+                  shortTitle: "Delivery Box",
+                  image: "/amenities/delivery-box.jpg",
+                },
+                {
+                  icon: Lock,
+                  title: "Box Locker Privativo",
+                  shortTitle: "Box Locker",
+                  image: "/amenities/box-locker.jpeg",
+                },
+                {
+                  icon: Bike,
+                  title: "Bike Point e oficina e tomada elétrica",
+                  shortTitle: "Bike Point",
+                  image: "/amenities/bike-point.jpg",
+                },
+                {
+                  icon: Zap,
+                  title: "Tomadas para Veículos elétricos",
+                  shortTitle: "Carregamento",
+                  image: "/amenities/tomadas-eletricas.jpg",
+                },
+                {
+                  icon: Sun,
+                  title: "Aquecimento Solar Central",
+                  shortTitle: "Solar",
+                  image: "/amenities/aquecimento-solar.jpg",
+                },
+                {
+                  icon: Droplet,
+                  title: "Preparação para Hidro ou ofurô",
+                  shortTitle: "Hidro",
+                  image: "/amenities/hidro-ofuro.jpg",
+                },
+                {
+                  icon: PawPrint,
+                  title: "PetCare e LavaPatas",
+                  shortTitle: "PetCare",
+                  image: "/amenities/petcare.jpg",
+                },
+              ].map((amenity, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedAmenity(index)}
+                  className={`group relative p-6 rounded-2xl transition-all duration-300 ${
+                    selectedAmenity === index
+                      ? "bg-gradient-to-br from-[#c9a961] to-[#b89851] scale-105 shadow-2xl shadow-[#c9a961]/50"
+                      : "bg-gradient-to-br from-neutral-900 to-black border border-[#c9a961]/30 hover:border-[#c9a961]/60 hover:scale-105"
+                  }`}
+                >
+                  <div className="flex flex-col items-center gap-3">
+                    <div
+                      className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        selectedAmenity === index
+                          ? "bg-black/20"
+                          : "bg-[#c9a961]/20 group-hover:bg-[#c9a961]/30"
+                      }`}
+                    >
+                      <amenity.icon
+                        className={`w-8 h-8 transition-all duration-300 ${
+                          selectedAmenity === index ? "text-black" : "text-[#c9a961]"
+                        }`}
+                      />
+                    </div>
+                    <h3
+                      className={`text-sm font-semibold text-center leading-tight ${
+                        selectedAmenity === index ? "text-black" : "text-white"
+                      }`}
+                    >
+                      {amenity.shortTitle}
+                    </h3>
+                  </div>
+                  {selectedAmenity === index && (
+                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-[#b89851]" />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            {/* Selected Amenity Image and Description */}
+            <div className="fade-in-section">
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
+                <img
+                  src={
+                    [
+                      "/amenities/minimercado.jpg",
+                      "/amenities/delivery-box.jpg",
+                      "/amenities/box-locker.jpg",
+                      "/amenities/bike-point.jpg",
+                      "/amenities/tomadas-eletricas.jpg",
+                      "/amenities/aquecimento-solar.jpg",
+                      "/amenities/hidro-ofuro.jpg",
+                      "/amenities/petcare.jpg",
+                    ][selectedAmenity] || "/placeholder.svg"
+                  }
+                  alt="Amenidade selecionada"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    {
+                      [
+                        "MINIMERCADO Autônomo",
+                        "Delivery Box Com Refrigeradores",
+                        "Box Locker Privativo",
+                        "Bike Point e oficina e tomada elétrica",
+                        "Tomadas para Veículos elétricos",
+                        "Aquecimento Solar Central",
+                        "Preparação para Hidro ou ofurô",
+                        "PetCare e LavaPatas",
+                      ][selectedAmenity]
+                    }
+                  </h3>
+                  <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl">
+                    {
+                      [
+                        "Praticidade e conveniência ao seu alcance. Faça suas compras rápidas sem sair do condomínio.",
+                        "Receba suas encomendas com segurança. Sistema refrigerado para alimentos frescos.",
+                        "Espaço privativo e seguro para guardar seus pertences e receber encomendas.",
+                        "Espaço completo com oficina e ponto de recarga para sua bike elétrica.",
+                        "Prepare-se para o futuro com estações de carregamento para veículos elétricos.",
+                        "Economia e sustentabilidade com sistema de aquecimento solar com medição individual.",
+                        "Relaxe na sua própria hidromassagem ou ofurô na varanda da suíte master.",
+                        "Área exclusiva para cuidar do seu pet com lava-patas e muito carinho.",
+                      ][selectedAmenity]
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interiores Personalizados Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/fundo-madeira.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 fade-in-section">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                INTERIORES PERSONALIZADO
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto rounded-full" />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Texto */}
+              <div className="fade-in-section space-y-6 order-2 lg:order-1">
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  Incluso projeto de interiores completo com equipe Henrique Gasparini arquitetura, com possibilidade de
+                  customização dos revestimentos, pedras, louças, metais, iluminação, marcenaria, gesso, podendo haver
+                  upgrade de materiais, aproveitando a mão de obra da construção, evitando desperdício de insumos, de
+                  tempo e de custos com reformas.
+                </p>
+
+                <div className="bg-gradient-to-br from-[#c9a961]/20 to-[#b89851]/10 backdrop-blur-lg p-8 rounded-2xl border border-[#c9a961]/30">
+                  <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed">
+                    No VertManguinhos a sua casa suspensa tem a sua cara, sua identidade, totalmente adaptada às suas
+                    necessidades e ao seu estilo.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  {[
+                    "Revestimentos",
+                    "Pedras",
+                    "Louças",
+                    "Metais",
+                    "Iluminação",
+                    "Marcenaria",
+                    "Gesso",
+                    "Upgrade de Materiais",
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 bg-neutral-900/50 p-3 rounded-lg border border-[#c9a961]/20 hover:border-[#c9a961]/50 transition-all duration-300"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-[#c9a961]" />
+                      <span className="text-white/90 text-sm md:text-base">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Imagem */}
+              <div className="fade-in-section order-1 lg:order-2">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
+                  <img
+                    src="/interior-personalizado.jpeg"
+                    alt="Interiores Personalizados"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inteligência Construtiva Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/familia-feliz-praia.png" alt="Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/60" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 fade-in-section">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                INTELIGÊNCIA CONSTRUTIVA E TECNOLOGIA AVANÇADA
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-6 rounded-full" />
+              <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+                Que gera segurança, sustentabilidade, precisão, durabilidade e facilidade de manutenção
+              </p>
+            </div>
+
+            <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Estrutura e Construção */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Estrutura e Construção</h3>
+                <div className="space-y-2">
+                  {[
+                    "Estrutura em concreto armado e laje protendida",
+                    "Paredes internas em Drywall",
+                    "Paredes externas em Steel Frame",
+                    "Escadas de bombeiro metálicas",
+                    "Revestimentos das vigas em ACM",
+                    "Fachada toda revestida",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Segurança */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Segurança</h3>
+                <div className="space-y-2">
+                  {[
+                    "Fechadura eletrônica nas unidades",
+                    "Pulmão com duas portas",
+                    "Sistema contra incêndio",
+                    "Acesso por biometria facial",
+                    "Guarita com portaria 24h",
+                    "Elevadores com reconhecimento",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sustentabilidade */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Sustentabilidade</h3>
+                <div className="space-y-2">
+                  {[
+                    "Aquecimento solar central",
+                    "Captação águas pluviais",
+                    "Sistema de refrigeração VRV",
+                    "Medição digital individual",
+                    "Espaço para gerador",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tecnologia */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Tecnologia</h3>
+                <div className="space-y-2">
+                  {[
+                    "Automação residencial",
+                    "Wifi na área de lazer",
+                    "Minimercado autônomo",
+                    "Espaço delivery refrigerado",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobilidade */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Mobilidade</h3>
+                <div className="space-y-2">
+                  {[
+                    "Bike Point com oficina",
+                    "Tomadas p/ bike elétrica",
+                    "Acesso serviços lateral",
+                    "Box Lockers privativos",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Conforto */}
+              <div>
+                <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Conforto</h3>
+                <div className="space-y-2">
+                  {[
+                    "PetCare e Lava Patas",
+                    "Preparação hidromassagem",
+                    "Prep. máquina lava-louças",
+                    "Bancadas 70-80cm prof.",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2 text-white/90">
+                      <div className="w-1 h-1 rounded-full bg-[#c9a961] mt-2 flex-shrink-0" />
+                      <p className="text-xs md:text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location & Connectivity Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
@@ -682,7 +1064,7 @@ export default function VertManguinhosPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                img: "/shopping-mall-interior-modern.jpeg",
+                img: "/mahai-serra.jpeg",
                 icon: ShoppingCart,
                 title: "Shopping & Comércio",
                 desc: "Shoppings e comércio completo a poucos minutos",
@@ -751,38 +1133,43 @@ export default function VertManguinhosPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-[#c9a961]/10 to-black" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c9a961]/20 rounded-full blur-3xl animate-pulse" />
-        </div>
+      {/* CTA Section - Last Section Before Footer */}
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-900 to-[#c9a961]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center fade-in-section">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Pronto para Viver nas Alturas?</h2>
-            <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
-              Entre em contato e descubra como o Vert Manguinhos pode ser o seu novo lar de alto padrão.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contatos">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
-                >
-                  <span className="relative z-10">Fale Conosco</span>
-                  <div className="absolute inset-0 shimmer" />
-                </Button>
-              </Link>
-              <Link href="/">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#c9a961] text-white hover:bg-[#c9a961] hover:text-black px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 bg-transparent backdrop-blur-sm"
-                >
-                  Voltar ao Início
-                </Button>
-              </Link>
+          <div className="max-w-4xl mx-auto text-center fade-in-section">
+            <div className="mb-8">
+              <div className="flex items-center justify-center mb-8">
+                <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#c9a961]" />
+                <div className="w-2 h-2 bg-[#c9a961] rounded-full mx-4" />
+                <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#c9a961]" />
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+                Pronto para Viver nas Alturas?
+              </h2>
+              <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
+                Entre em contato e descubra como o Vert Manguinhos pode ser o seu novo lar de alto padrão.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
+              >
+                <span className="relative z-10">Fale Conosco</span>
+                <div className="absolute inset-0 shimmer" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="border-2 border-[#c9a961] text-[#c9a961] hover:bg-[#c9a961] hover:text-black px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 bg-transparent backdrop-blur-sm"
+              >
+                Voltar ao Início
+              </Button>
             </div>
           </div>
         </div>

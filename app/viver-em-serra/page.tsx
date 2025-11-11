@@ -190,20 +190,24 @@ export default function ViverEmSerraPage() {
         </div>
       </section>
 
-      {/* Qualidade de Vida Section */}
-      <section className="relative py-24 overflow-hidden">
+      {/* Beach Gallery Section */}
+      <section className="relative py-24 overflow-hidden bg-black">
         <div className="absolute inset-0">
-          <img src="/jeans2.png" alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-neutral-900 to-black opacity-50" />
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+            }}
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 fade-in-section">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Qualidade de Vida em{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a961] to-[#b89851]">
-                Destaque
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Viva o Melhor do{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a961] to-[#b89851]">Litoral</span>
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-8 rounded-full" />
             <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
@@ -213,54 +217,42 @@ export default function ViverEmSerraPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                img: "/shopping-mall-interior-modern.jpeg",
-                title: "Comércio Completo",
-                desc: "Shoppings e centros comerciais de alto padrão",
-                delay: "stagger-1",
+                img: "/mahai-serra.jpeg",
+                title: "Mahai",
+                desc: "Praia urbana com infraestrutura completa",
               },
               {
-                img: "/hospital-estadual-jayme-santos-neves.jpg",
-                title: "Saúde & Educação",
-                desc: "Hospitais e escolas de referência no estado",
-                delay: "stagger-2",
+                img: "/praiavista-serra.jpeg",
+                title: "Vista Paradisíaca",
+                desc: "Beleza natural que encanta moradores e visitantes",
               },
               {
-                img: "/mobilidade-urbana-aerial-night.jpg",
-                title: "Mobilidade Urbana",
-                desc: "Acesso às principais vias da Grande Vitória",
-                delay: "stagger-3",
+                img: "/praia-serra.jpeg",
+                title: "Litoral de Serra",
+                desc: "Quilômetros de areia branca e mar cristalino",
               },
-            ].map((item, index) => (
+            ].map((beach, index) => (
               <div
                 key={index}
-                className={`fade-in-section ${item.delay} relative h-[380px] rounded-2xl overflow-hidden border border-[#c9a961]/30 group hover:border-[#c9a961]/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c9a961]/20`}
+                className={`fade-in-section stagger-${index + 1} group relative h-[450px] rounded-2xl overflow-hidden border border-[#c9a961]/30 hover:border-[#c9a961]/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c9a961]/20`}
               >
                 <img
-                  src={item.img}
-                  alt={item.title}
+                  src={beach.img}
+                  alt={beach.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute inset-0 flex items-end p-6">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-lg text-white/90 leading-relaxed">{item.desc}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{beach.title}</h3>
+                    <p className="text-lg text-white/90 leading-relaxed">{beach.desc}</p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="fade-in-section text-center">
-            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-              As praias de <span className="text-[#c9a961] font-semibold">Manguinhos</span> e{" "}
-              <span className="text-[#c9a961] font-semibold">Jacaraípe</span> oferecem um refúgio perfeito para relaxar,
-              enquanto os polos gastronômicos garantem lazer e conveniência. É a união perfeita entre a tranquilidade de
-              uma cidade litorânea e as facilidades de um grande centro urbano.
-            </p>
           </div>
         </div>
       </section>

@@ -84,10 +84,10 @@ export function Footer() {
               <div className="mt-6">
                 <p className="text-white/50 text-xs mb-1">E-mail</p>
                 <a
-                  href="mailto:invista@upmont.com.br"
+                  href="mailto:contato@upmont.com.br"
                   className="text-white hover:text-[#c9a961] transition-colors duration-300 font-medium"
                 >
-                  invista@upmont.com.br
+                  contato@upmont.com.br
                 </a>
               </div>
             </div>
