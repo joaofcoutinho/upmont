@@ -702,7 +702,7 @@ export default function VertManguinhosPage() {
                   icon: Lock,
                   title: "Box Locker Privativo",
                   shortTitle: "Box Locker",
-                  image: "/amenities/box-locker.jpeg",
+                  image: "/box-locker.jpeg",
                 },
                 {
                   icon: Bike,
@@ -781,7 +781,7 @@ export default function VertManguinhosPage() {
                     [
                       "/amenities/minimercado.jpg",
                       "/amenities/delivery-box.jpg",
-                      "/amenities/box-locker.jpg",
+                      "/box-locker.jpeg",
                       "/amenities/bike-point.jpg",
                       "/amenities/tomadas-eletricas.jpg",
                       "/amenities/aquecimento-solar.jpg",
