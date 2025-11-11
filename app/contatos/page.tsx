@@ -76,8 +76,8 @@ export default function ContatosPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Endereço</h3>
-                    <p className="text-gray-400">Av. Central, 1000 - Praia de Manguinhos</p>
-                    <p className="text-gray-400">Serra - ES, 29173-087</p>
+                    <p className="text-gray-400">Centro Empresarial da Serra - Ed, Av. Eldes Scherrer Souza, 1025 - 502 - Parque Res. Laranjeiras</p>
+                    <p className="text-gray-400">Serra - ES, 29165-680</p>
                   </div>
                 </div>
 
@@ -159,23 +159,6 @@ export default function ContatosPage() {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-[#c9a961]/20 overflow-hidden">
-              <div className="aspect-[21/9] bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-[#c9a961] mx-auto mb-4" />
-                  <p className="text-gray-400">Mapa de localização</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
       <WhatsAppFloatButton />
     </main>
