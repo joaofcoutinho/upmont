@@ -183,7 +183,7 @@ export default function VertManguinhosPage() {
         <div className="relative container mx-auto px-4 h-full min-h-screen flex flex-col justify-center py-32 md:py-40">
           <div className="max-w-3xl">
             <div className="mb-6 animate-[fadeIn_1s_ease-out]">
-              <img src="/vert-manguinhos-logo.png" alt="Vert Manguinhos" className="h-24 md:h-32 lg:h-40 w-auto" />
+              <img src="/vert-manguinhos-logo.png" alt="Vert Manguinhos" className="h-32 md:h-36 lg:h-40 w-auto" />
             </div>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed animate-[fadeIn_1s_ease-out_0.2s_both]">
               Sua casa de alto padrão nas altura, com vista para o mar e para o Mestre Álvaro.
@@ -414,7 +414,7 @@ export default function VertManguinhosPage() {
             </div>
 
             <div className="relative fade-in-section">
-              <div className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-gradient-to-b from-neutral-950/50 to-neutral-900/50 rounded-3xl overflow-hidden border border-[#c9a961]/30 shadow-2xl hover:shadow-[#c9a961]/20 transition-all duration-500 group">
+              <div className="relative h-[400px] md:h-[550px] lg:h-[700px] bg-gradient-to-b from-neutral-950/50 to-neutral-900/50 rounded-3xl overflow-hidden border border-[#c9a961]/30 shadow-2xl hover:shadow-[#c9a961]/20 transition-all duration-500 group">
                 {buildingImages.map((image, index) => (
                   <img
                     key={index}
@@ -479,7 +479,7 @@ export default function VertManguinhosPage() {
           </div>
 
           {/* Bento Grid Layout */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {/* Row 1 - 4 equal items */}
             <div className="group relative overflow-hidden rounded-2xl aspect-square border border-[#c9a961]/20 hover:border-[#c9a961]/60 transition-all duration-500 fade-in-section stagger-1">
               <img
@@ -590,6 +590,64 @@ export default function VertManguinhosPage() {
               </div>
             </div>
           </div>
+
+          {/* Row 4 - Academia e Piscina Destaque */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/academia-destaque.jpeg"
+                alt="Academia"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Academia com Vista pro Mar</h3>
+                <p className="text-white/80 text-sm">Equipamentos modernos para seu treino na cobertura</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/piscina-destaque.jpeg"
+                alt="Piscina"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Piscina com Vista pro Mar</h3>
+                <p className="text-white/80 text-sm">Piscina aquecida com vista panorâmica</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 5 - Academia e Piscina Adicionais */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/academia.jpeg"
+                alt="Academia - Vista 2"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Academia Completa</h3>
+                <p className="text-white/80 text-sm">Espaço amplo e bem equipado para suas atividades físicas</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/piscina.jpeg"
+                alt="Piscina - Vista 2"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Piscina na Cobertura</h3>
+                <p className="text-white/80 text-sm">Deck completo para relaxar e aproveitar o sol</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -684,7 +742,7 @@ export default function VertManguinhosPage() {
             </div>
 
             {/* Amenity Buttons */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12 fade-in-section">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4 mb-12 fade-in-section">
               {[
                 {
                   icon: Package,
@@ -810,7 +868,7 @@ export default function VertManguinhosPage() {
 
               {/* Right Column - Image */}
               <div className="order-1 lg:order-2">
-                <div className="relative h-[350px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
+                <div className="relative h-[300px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
                   <img
                     src={
                       [
@@ -872,7 +930,7 @@ export default function VertManguinhosPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-4">
                   {[
                     "Revestimentos",
                     "Pedras",
@@ -887,8 +945,8 @@ export default function VertManguinhosPage() {
                       key={index}
                       className="flex items-center gap-2 bg-neutral-900/50 p-3 rounded-lg border border-[#c9a961]/20 hover:border-[#c9a961]/50 transition-all duration-300"
                     >
-                      <div className="w-2 h-2 rounded-full bg-[#c9a961]" />
-                      <span className="text-white/90 text-sm md:text-base">{item}</span>
+                      <div className="w-2 h-2 rounded-full bg-[#c9a961] flex-shrink-0" />
+                      <span className="text-white/90 text-xs sm:text-sm md:text-base">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -943,7 +1001,7 @@ export default function VertManguinhosPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
               {[
                 {
                   logo: "/logo-henrique.png",
@@ -970,7 +1028,7 @@ export default function VertManguinhosPage() {
                   key={index}
                   className={`fade-in-section stagger-${index + 1} group transition-all duration-500 hover:-translate-y-2`}
                 >
-                  <div className="flex items-center justify-center mb-8 h-40 md:h-48">
+                  <div className="flex items-center justify-center mb-6 md:mb-8 h-32 md:h-40 lg:h-48">
                     <img
                       src={tech.logo}
                       alt={tech.name}
@@ -1009,7 +1067,7 @@ export default function VertManguinhosPage() {
               </p>
             </div>
 
-            <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Estrutura e Construção */}
               <div>
                 <h3 className="text-[#c9a961] font-bold text-base mb-3 uppercase tracking-wide">Estrutura e Construção</h3>

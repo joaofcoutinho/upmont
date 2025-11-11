@@ -114,11 +114,11 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
     <div className="w-full space-y-6">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 bg-black">
-        <div className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center">
+        <div className="relative min-h-[400px] md:min-h-[550px] lg:min-h-[700px] flex items-center justify-center">
           <img
             src={currentPlan.image || "/placeholder.svg"}
             alt={currentPlan.title}
-            className={`w-full h-full object-cover ${currentPlan.id === 3 ? "scale-[1.5]" : "scale-[1.25]"}`}
+            className={`w-full h-full object-cover ${currentPlan.id === 3 ? "scale-100 md:scale-125 lg:scale-150" : "scale-100 md:scale-110 lg:scale-125"}`}
           />
 
           {/* Navigation Buttons */}

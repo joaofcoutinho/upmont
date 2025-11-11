@@ -91,7 +91,7 @@ export default function QuemSomosPage() {
               <img
                 src="/images/design-mode/logo-upmont.png"
                 alt="UpMont"
-                className="h-24 md:h-32 mx-auto drop-shadow-2xl"
+                className="h-28 md:h-32 lg:h-36 mx-auto drop-shadow-2xl"
               />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-[fadeIn_1s_ease-out_0.2s_both]">
@@ -243,7 +243,7 @@ export default function QuemSomosPage() {
 
               {/* Imagem */}
               <div className="fade-in-section relative">
-                <div className="relative h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
+                <div className="relative h-[400px] md:h-[550px] lg:h-[700px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
                   <img
                     src="/henrique-sozinho.jpeg"
                     alt="Henrique Gasparini"

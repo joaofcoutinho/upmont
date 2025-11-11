@@ -78,7 +78,7 @@ export function ContactFormSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -102,7 +102,7 @@ export function ContactFormSection() {
                       placeholder="NOME COMPLETO"
                       value={formData.nome}
                       onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 placeholder:text-white/40 text-white text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
+                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-14 md:h-16 placeholder:text-white/40 text-white text-base md:text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
                     />
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a961]/0 via-[#c9a961]/5 to-[#c9a961]/0 opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
                   </div>
@@ -112,7 +112,7 @@ export function ContactFormSection() {
                       placeholder="WHATSAPP"
                       value={formData.whatsapp}
                       onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 placeholder:text-white/40 text-white text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
+                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-14 md:h-16 placeholder:text-white/40 text-white text-base md:text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
                     />
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a961]/0 via-[#c9a961]/5 to-[#c9a961]/0 opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
                   </div>
@@ -122,7 +122,7 @@ export function ContactFormSection() {
                       placeholder="E-MAIL"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 placeholder:text-white/40 text-white text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
+                      className="bg-white/5 backdrop-blur-sm border border-white/20 h-14 md:h-16 placeholder:text-white/40 text-white text-base md:text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl"
                     />
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#c9a961]/0 via-[#c9a961]/5 to-[#c9a961]/0 opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
                   </div>
@@ -131,7 +131,7 @@ export function ContactFormSection() {
                       value={formData.unidadeInteresse}
                       onValueChange={(value) => setFormData({ ...formData, unidadeInteresse: value })}
                     >
-                      <SelectTrigger className="bg-white/5 backdrop-blur-sm border border-white/20 h-16 text-white/40 text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl data-[state=open]:border-[#c9a961]">
+                      <SelectTrigger className="bg-white/5 backdrop-blur-sm border border-white/20 h-14 md:h-16 text-white/40 text-base md:text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl data-[state=open]:border-[#c9a961]">
                         <SelectValue placeholder="UNIDADE DE INTERESSE" />
                       </SelectTrigger>
                       <SelectContent className="bg-black/95 backdrop-blur-lg border-[#c9a961]/30">

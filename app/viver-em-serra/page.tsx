@@ -139,7 +139,7 @@ export default function ViverEmSerraPage() {
               <div className="inline-flex items-center gap-4 bg-gradient-to-r from-[#c9a961]/20 to-[#b89851]/10 backdrop-blur-lg border border-[#c9a961]/30 rounded-2xl px-8 py-6">
                 <TrendingUp className="w-12 h-12 text-[#c9a961]" />
                 <div className="text-left">
-                  <p className="text-5xl md:text-6xl font-bold text-[#c9a961]">42%</p>
+                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#c9a961]">42%</p>
                   <p className="text-white/80 text-sm md:text-base">Valorização em 3 anos</p>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function ViverEmSerraPage() {
                 key={index}
                 className={`fade-in-section ${stat.delay} bg-gradient-to-br from-neutral-900/80 to-black/80 backdrop-blur-lg p-8 rounded-2xl border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c9a961]/20 text-center`}
               >
-                <p className="text-6xl md:text-7xl font-bold text-[#c9a961] mb-4">{stat.number}</p>
+                <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#c9a961] mb-4">{stat.number}</p>
                 <p className="text-white/80 text-lg">{stat.label}</p>
               </div>
             ))}
