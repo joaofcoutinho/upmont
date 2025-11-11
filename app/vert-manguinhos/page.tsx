@@ -690,13 +690,13 @@ export default function VertManguinhosPage() {
                   icon: Package,
                   title: "MINIMERCADO Autônomo",
                   shortTitle: "Minimercado",
-                  image: "/amenities/minimercado.jpg",
+                  image: "/minimercado.jpeg",
                 },
                 {
                   icon: Package,
                   title: "Delivery Box Com Refrigeradores",
                   shortTitle: "Delivery Box",
-                  image: "/amenities/delivery-box.jpg",
+                  image: "/delivery-box.jpeg",
                 },
                 {
                   icon: Lock,
@@ -708,31 +708,31 @@ export default function VertManguinhosPage() {
                   icon: Bike,
                   title: "Bike Point e oficina e tomada elétrica",
                   shortTitle: "Bike Point",
-                  image: "/amenities/bike-point.jpg",
+                  image: "/bike-point.jpeg",
                 },
                 {
                   icon: Zap,
                   title: "Tomadas para Veículos elétricos",
                   shortTitle: "Carregamento",
-                  image: "/amenities/tomadas-eletricas.jpg",
+                  image: "tomadas-eletricas.jpeg",
                 },
                 {
                   icon: Sun,
                   title: "Aquecimento Solar Central",
                   shortTitle: "Solar",
-                  image: "/amenities/aquecimento-solar.jpg",
+                  image: "aquecimento-solar.png",
                 },
                 {
                   icon: Droplet,
                   title: "Preparação para Hidro ou ofurô",
                   shortTitle: "Hidro",
-                  image: "/amenities/hidro-ofuro.jpg",
+                  image: "/hidro-ofuro.jpeg",
                 },
                 {
                   icon: PawPrint,
                   title: "PetCare e LavaPatas",
                   shortTitle: "PetCare",
-                  image: "/amenities/petcare.jpg",
+                  image: "/pet-care.jpg",
                 },
               ].map((amenity, index) => (
                 <button
@@ -774,54 +774,60 @@ export default function VertManguinhosPage() {
             </div>
 
             {/* Selected Amenity Image and Description */}
-            <div className="fade-in-section">
-              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
-                <img
-                  src={
+            <div className="fade-in-section grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left Column - Title and Description */}
+              <div className="space-y-6 order-2 lg:order-1">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  {
                     [
-                      "/amenities/minimercado.jpg",
-                      "/amenities/delivery-box.jpg",
-                      "/box-locker.jpeg",
-                      "/amenities/bike-point.jpg",
-                      "/amenities/tomadas-eletricas.jpg",
-                      "/amenities/aquecimento-solar.jpg",
-                      "/amenities/hidro-ofuro.jpg",
-                      "/amenities/petcare.jpg",
-                    ][selectedAmenity] || "/placeholder.svg"
+                      "MINIMERCADO Autônomo",
+                      "Delivery Box Com Refrigeradores",
+                      "Box Locker Privativo",
+                      "Bike Point e oficina e tomada elétrica",
+                      "Tomadas para Veículos elétricos",
+                      "Aquecimento Solar Central",
+                      "Preparação para Hidro ou ofurô",
+                      "PetCare e LavaPatas",
+                    ][selectedAmenity]
                   }
-                  alt="Amenidade selecionada"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                    {
+                </h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-[#c9a961] to-transparent rounded-full" />
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  {
+                    [
+                      "Praticidade e conveniência ao seu alcance. Faça suas compras rápidas sem sair do condomínio.",
+                      "Receba suas encomendas com segurança. Sistema refrigerado para alimentos frescos.",
+                      "Espaço privativo e seguro para guardar seus pertences e receber encomendas.",
+                      "Espaço completo com oficina e ponto de recarga para sua bike elétrica.",
+                      "Prepare-se para o futuro com estações de carregamento para veículos elétricos.",
+                      "Economia e sustentabilidade com sistema de aquecimento solar com medição individual.",
+                      "Relaxe na sua própria hidromassagem ou ofurô na varanda da suíte master.",
+                      "Área exclusiva para cuidar do seu pet com lava-patas e muito carinho.",
+                    ][selectedAmenity]
+                  }
+                </p>
+              </div>
+
+              {/* Right Column - Image */}
+              <div className="order-1 lg:order-2">
+                <div className="relative h-[350px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
+                  <img
+                    src={
                       [
-                        "MINIMERCADO Autônomo",
-                        "Delivery Box Com Refrigeradores",
-                        "Box Locker Privativo",
-                        "Bike Point e oficina e tomada elétrica",
-                        "Tomadas para Veículos elétricos",
-                        "Aquecimento Solar Central",
-                        "Preparação para Hidro ou ofurô",
-                        "PetCare e LavaPatas",
-                      ][selectedAmenity]
+                        "/minimercado.jpeg",
+                        "/delivery-box.jpeg",
+                        "/box-locker.jpeg",
+                        "/bike-point.jpeg",
+                        "/tomadas-eletricas.jpeg",
+                        "/aquecimento-solar.png",
+                        "/hidro-ofuro.jpeg",
+                        "/pet-care.jpeg",
+                      ][selectedAmenity] || "/placeholder.svg"
                     }
-                  </h3>
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl">
-                    {
-                      [
-                        "Praticidade e conveniência ao seu alcance. Faça suas compras rápidas sem sair do condomínio.",
-                        "Receba suas encomendas com segurança. Sistema refrigerado para alimentos frescos.",
-                        "Espaço privativo e seguro para guardar seus pertences e receber encomendas.",
-                        "Espaço completo com oficina e ponto de recarga para sua bike elétrica.",
-                        "Prepare-se para o futuro com estações de carregamento para veículos elétricos.",
-                        "Economia e sustentabilidade com sistema de aquecimento solar com medição individual.",
-                        "Relaxe na sua própria hidromassagem ou ofurô na varanda da suíte master.",
-                        "Área exclusiva para cuidar do seu pet com lava-patas e muito carinho.",
-                      ][selectedAmenity]
-                    }
-                  </p>
+                    alt="Amenidade selecionada"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                 </div>
               </div>
             </div>
