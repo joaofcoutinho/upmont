@@ -56,16 +56,26 @@ export default function VertManguinhosPage() {
       <Header />
 
       <style jsx global>{`
-        .fade-in-section {
-          opacity: 0;
-          transform: translateY(30px);
-          transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-            transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Disable fade-in animations on mobile */
+        @media (max-width: 768px) {
+          .fade-in-section {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
         }
 
-        .fade-in-section.animate-in {
-          opacity: 1;
-          transform: translateY(0);
+        @media (min-width: 769px) {
+          .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          .fade-in-section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .stagger-1 {
@@ -172,7 +182,8 @@ export default function VertManguinhosPage() {
             alt="Vert Manguinhos"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+          {/* Mobile: darker overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40 md:via-black/10 md:to-transparent" />
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#c9a961]/10 rounded-full blur-3xl float-animation" />
           <div
             className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#c9a961]/5 rounded-full blur-3xl float-animation"
@@ -181,15 +192,15 @@ export default function VertManguinhosPage() {
         </div>
 
         <div className="relative container mx-auto px-4 h-full min-h-screen flex flex-col justify-center py-32 md:py-40">
-          <div className="max-w-3xl">
-            <div className="mb-6 animate-[fadeIn_1s_ease-out]">
+          <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+            <div className="mb-6 animate-[fadeIn_1s_ease-out] flex justify-center md:justify-start">
               <img src="/vert-manguinhos-logo.png" alt="Vert Manguinhos" className="h-32 md:h-36 lg:h-40 w-auto" />
             </div>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed animate-[fadeIn_1s_ease-out_0.2s_both]">
               Sua casa de alto padrão nas altura, com vista para o mar e para o Mestre Álvaro.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 mb-8 animate-[fadeIn_1s_ease-out_0.3s_both]">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-8 mb-8 animate-[fadeIn_1s_ease-out_0.3s_both]">
               <div className="flex items-center gap-3">
                 <Home className="w-5 h-5 text-[#c9a961]" />
                 <div>
@@ -215,7 +226,7 @@ export default function VertManguinhosPage() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 animate-[fadeIn_1s_ease-out_0.4s_both]">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-[fadeIn_1s_ease-out_0.4s_both]">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#c9a961]/50 shadow-xl relative overflow-hidden group"
