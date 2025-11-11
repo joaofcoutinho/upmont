@@ -675,7 +675,7 @@ export default function VertManguinhosPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 fade-in-section">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                Amenidades de Alto Padrão
+                Comodidades de Alto Padrão para seu bem-estar.
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-8 rounded-full" />
               <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
