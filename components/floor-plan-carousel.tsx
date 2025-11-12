@@ -118,7 +118,7 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
           <img
             src={currentPlan.image || "/placeholder.svg"}
             alt={currentPlan.title}
-            className={`w-full h-full object-cover ${currentPlan.id === 3 ? "scale-100 md:scale-125 lg:scale-150" : "scale-100 md:scale-110 lg:scale-125"}`}
+            className="w-full h-full object-cover scale-100 md:scale-110 lg:scale-125"
           />
 
           {/* Navigation Buttons */}

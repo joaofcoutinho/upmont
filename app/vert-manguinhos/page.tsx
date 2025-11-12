@@ -606,7 +606,7 @@ export default function VertManguinhosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
               <img
-                src="/academia-destaque.jpeg"
+                src="/academia-vistamar.jpeg"
                 alt="Academia"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -635,7 +635,7 @@ export default function VertManguinhosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
               <img
-                src="/academia.jpeg"
+                src="/academia-vistageral.jpeg"
                 alt="Academia - Vista 2"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -656,6 +656,35 @@ export default function VertManguinhosPage() {
               <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <h3 className="text-white font-bold text-2xl mb-2">Piscina na Cobertura</h3>
                 <p className="text-white/80 text-sm">Deck completo para relaxar e aproveitar o sol</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 6 - Balcão Gourmet e Churrasqueira */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/Balcão gourmet completo.jpeg"
+                alt="Balcão Gourmet"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Balcão Gourmet Completo</h3>
+                <p className="text-white/80 text-sm">Área gourmet equipada com balcão para suas confraternizações</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/churrasqueira com cobertura.jpeg"
+                alt="Churrasqueira"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Churrasqueira com Cobertura</h3>
+                <p className="text-white/80 text-sm">Espaço protegido para churrascos em qualquer clima</p>
               </div>
             </div>
           </div>
