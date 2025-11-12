@@ -2,13 +2,12 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Menu, X, Search } from "lucide-react"
+import { Menu, X, Search } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [empreendimentosOpen, setEmpreendimentosOpen] = useState(false)
   const [searchFocused, setSearchFocused] = useState(false)
 
   return (
@@ -91,34 +90,13 @@ export function Header() {
               <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
             </Link>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setEmpreendimentosOpen(true)}
-              onMouseLeave={() => setEmpreendimentosOpen(false)}
+            <Link
+              href="/vert-manguinhos"
+              className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
             >
-              <button className="text-white hover:text-[#c9a961] transition-all duration-300 flex items-center gap-1.5 group">
-                EMPREENDIMENTOS
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-300 ${empreendimentosOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-              {empreendimentosOpen && (
-                <div className="absolute top-full left-0 mt-4 bg-black/95 backdrop-blur-xl py-3 px-5 min-w-[180px] shadow-2xl rounded-lg border border-[#c9a961]/30 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <Link
-                    href="/empreendimentos/verthouses"
-                    className="block text-white hover:text-[#c9a961] hover:translate-x-1 py-2.5 text-xs transition-all duration-300 border-b border-[#c9a961]/10 last:border-0"
-                  >
-                    VertHouses
-                  </Link>
-                  <Link
-                    href="/empreendimentos/upstudios"
-                    className="block text-white hover:text-[#c9a961] hover:translate-x-1 py-2.5 text-xs transition-all duration-300"
-                  >
-                    UpStudios
-                  </Link>
-                </div>
-              )}
-            </div>
+              VERT MANGUINHOS
+              <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
+            </Link>
 
             <Link
               href="/viver-em-serra"
@@ -148,8 +126,8 @@ export function Header() {
               <Link href="/quem-somos" className="text-white hover:text-[#c9a961] transition-colors">
                 QUEM SOMOS
               </Link>
-              <Link href="/empreendimentos" className="text-white hover:text-[#c9a961] transition-colors">
-                EMPREENDIMENTOS
+              <Link href="/vert-manguinhos" className="text-white hover:text-[#c9a961] transition-colors">
+                VERT MANGUINHOS
               </Link>
               <Link href="/viver-em-serra" className="text-white hover:text-[#c9a961] transition-colors">
                 VIVER EM SERRA
