@@ -20,11 +20,13 @@ export default function LinksPage() {
         <div className="w-full max-w-md space-y-8">
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <img
-              src="/images/design-mode/logo-upmont.png"
-              alt="UpMont"
-              className="h-24 md:h-32 object-contain drop-shadow-2xl"
-            />
+            <Link href="/" className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+              <img
+                src="/images/design-mode/logo-upmont.png"
+                alt="UpMont"
+                className="h-24 md:h-32 object-contain drop-shadow-2xl"
+              />
+            </Link>
           </div>
 
           {/* Title */}
@@ -59,7 +61,7 @@ export default function LinksPage() {
             >
               <Button className="w-full h-16 bg-gradient-to-r from-[#c9a961] to-[#b89851] hover:from-[#b89851] hover:to-[#a67c3c] text-black font-semibold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 hover:scale-[1.02] transition-all duration-300 group">
                 <Instagram className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                Instagram @upmontincorporadora
+                Instagram
               </Button>
             </a>
 
