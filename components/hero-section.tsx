@@ -102,9 +102,11 @@ export function HeroSection() {
           </p>
 
           <div className="flex justify-center md:justify-start">
-            <button className="group px-10 py-4 border-2 border-[#c9a961] text-white hover:bg-[#c9a961] transition-all duration-300 rounded-lg text-lg md:text-xl font-medium shadow-lg hover:shadow-[#c9a961]/20">
-              Tenho Interesse
-            </button>
+            <a href="/#contato">
+              <button className="group px-10 py-4 border-2 border-[#c9a961] text-white hover:bg-[#c9a961] transition-all duration-300 rounded-lg text-lg md:text-xl font-medium shadow-lg hover:shadow-[#c9a961]/20">
+                Tenho Interesse
+              </button>
+            </a>
           </div>
         </div>
       </div>

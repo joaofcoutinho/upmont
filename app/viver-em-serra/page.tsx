@@ -464,7 +464,11 @@ export default function ViverEmSerraPage() {
               Conheça nossos empreendimentos em Serra e descubra como transformar seus sonhos em realidade.
             </p>
             <div className="flex flex-wrap gap-6 justify-center">
-              <Link href="/contatos">
+              <a
+                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-10 py-7 text-xl font-semibold rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
@@ -472,7 +476,7 @@ export default function ViverEmSerraPage() {
                   <span className="relative z-10">Fale Conosco</span>
                   <div className="absolute inset-0 shimmer" />
                 </Button>
-              </Link>
+              </a>
               <Link href="/">
                 <Button
                   size="lg"

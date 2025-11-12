@@ -16,12 +16,18 @@ export function Header() {
         {/* Top Row: Button, Logo, Search */}
         <div className="flex items-center justify-between py-4 border-b border-[#c9a961]/10">
           {/* Left: Fale com a UpMont Button */}
-          <Button
-            variant="outline"
-            className="hidden lg:flex border-[#c9a961]/40 text-white hover:bg-[#c9a961] hover:text-black hover:border-[#c9a961] transition-all duration-300 bg-transparent text-xs px-6 py-2.5 rounded-full font-medium tracking-wide hover:shadow-[0_0_20px_rgba(201,169,97,0.4)] hover:scale-105"
+          <a
+            href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Fale com a UpMont
-          </Button>
+            <Button
+              variant="outline"
+              className="hidden lg:flex border-[#c9a961]/40 text-white hover:bg-[#c9a961] hover:text-black hover:border-[#c9a961] transition-all duration-300 bg-transparent text-xs px-6 py-2.5 rounded-full font-medium tracking-wide hover:shadow-[0_0_20px_rgba(201,169,97,0.4)] hover:scale-105"
+            >
+              Fale com a UpMont
+            </Button>
+          </a>
 
           {/* Center: Logo */}
           <Link href="/" className="flex flex-col items-center group cursor-pointer">
@@ -124,12 +130,19 @@ export function Header() {
               <Link href="/viver-em-serra" className="text-white hover:text-[#c9a961] transition-colors">
                 VIVER EM SERRA
               </Link>
-              <Button
-                variant="outline"
-                className="border-[#c9a961] text-white hover:bg-[#c9a961] hover:text-black w-full bg-transparent"
+              <a
+                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                Fale com a UpMont
-              </Button>
+                <Button
+                  variant="outline"
+                  className="border-[#c9a961] text-white hover:bg-[#c9a961] hover:text-black w-full bg-transparent"
+                >
+                  Fale com a UpMont
+                </Button>
+              </a>
             </nav>
           </div>
         )}

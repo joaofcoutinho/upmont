@@ -119,7 +119,7 @@ export function ContactFormSection() {
   ]
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section id="contato" className="relative py-32 overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

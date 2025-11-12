@@ -39,7 +39,7 @@ export default function LinksPage() {
           <div className="space-y-4">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/5527999998888"
+              href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -52,14 +52,14 @@ export default function LinksPage() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/upmont"
+              href="https://instagram.com/upmontincorporadora"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
             >
               <Button className="w-full h-16 bg-gradient-to-r from-[#c9a961] to-[#b89851] hover:from-[#b89851] hover:to-[#a67c3c] text-black font-semibold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#c9a961]/50 hover:scale-[1.02] transition-all duration-300 group">
                 <Instagram className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                Instagram
+                Instagram @upmontincorporadora
               </Button>
             </a>
 

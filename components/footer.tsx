@@ -129,9 +129,18 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-[#c9a961]/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-            <p className="hover:text-[#c9a961] transition-colors duration-300 cursor-pointer">Viver em Serra</p>
+            <a href="/viver-em-serra" className="hover:text-[#c9a961] transition-colors duration-300 cursor-pointer">
+              Viver em Serra
+            </a>
             <p className="text-[#c9a961]/60">© 2025 Upmont Incorporadora. Todos os direitos reservados.</p>
-            <p className="hover:text-[#c9a961] transition-colors duration-300 cursor-pointer">Fale com a UpMont</p>
+            <a
+              href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#c9a961] transition-colors duration-300 cursor-pointer"
+            >
+              Fale com a UpMont
+            </a>
           </div>
         </div>
       </div>

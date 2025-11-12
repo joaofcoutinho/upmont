@@ -227,20 +227,28 @@ export default function VertManguinhosPage() {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-[fadeIn_1s_ease-out_0.4s_both]">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#c9a961]/50 shadow-xl relative overflow-hidden group"
+              <Link href="/#contato">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#c9a961]/50 shadow-xl relative overflow-hidden group"
+                >
+                  <span className="relative z-10">Tenho Interesse</span>
+                  <div className="absolute inset-0 shimmer" />
+                </Button>
+              </Link>
+              <a
+                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Vert%20Manguinhos."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="relative z-10">Tenho Interesse</span>
-                <div className="absolute inset-0 shimmer" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 bg-transparent backdrop-blur-sm"
-              >
-                Agendar Visita
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 bg-transparent backdrop-blur-sm"
+                >
+                  Agendar Visita
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1318,13 +1326,19 @@ export default function VertManguinhosPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
+              <a
+                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="relative z-10">Fale Conosco</span>
-                <div className="absolute inset-0 shimmer" />
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
+                >
+                  <span className="relative z-10">Fale Conosco</span>
+                  <div className="absolute inset-0 shimmer" />
+                </Button>
+              </a>
               <Button
                 size="lg"
                 variant="outline"
