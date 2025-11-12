@@ -969,27 +969,6 @@ export default function VertManguinhosPage() {
                     necessidades e ao seu estilo.
                   </p>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-4">
-                  {[
-                    "Revestimentos",
-                    "Pedras",
-                    "Louças",
-                    "Metais",
-                    "Iluminação",
-                    "Marcenaria",
-                    "Gesso",
-                    "Upgrade de Materiais",
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-2 bg-neutral-900/50 p-3 rounded-lg border border-[#c9a961]/20 hover:border-[#c9a961]/50 transition-all duration-300"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-[#c9a961] flex-shrink-0" />
-                      <span className="text-white/90 text-xs sm:text-sm md:text-base">{item}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
 
               {/* Imagem */}

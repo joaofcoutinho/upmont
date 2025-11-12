@@ -105,14 +105,6 @@ export function Header() {
               VIVER EM SERRA
               <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
             </Link>
-
-            <Link
-              href="/contatos"
-              className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
-            >
-              CONTATOS
-              <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
-            </Link>
           </div>
         </nav>
 
@@ -131,9 +123,6 @@ export function Header() {
               </Link>
               <Link href="/viver-em-serra" className="text-white hover:text-[#c9a961] transition-colors">
                 VIVER EM SERRA
-              </Link>
-              <Link href="/contatos" className="text-white hover:text-[#c9a961] transition-colors">
-                CONTATOS
               </Link>
               <Button
                 variant="outline"
