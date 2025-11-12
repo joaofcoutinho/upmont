@@ -15,10 +15,84 @@ export function ContactFormSection() {
     email: "",
     unidadeInteresse: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = () => {
+    if (!formData.nome.trim()) {
+      setErrorMessage("Por favor, preencha seu nome completo")
+      return false
+    }
+    if (!formData.whatsapp.trim()) {
+      setErrorMessage("Por favor, preencha seu WhatsApp")
+      return false
+    }
+    if (!formData.email.trim()) {
+      setErrorMessage("Por favor, preencha seu e-mail")
+      return false
+    }
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(formData.email)) {
+      setErrorMessage("Por favor, insira um e-mail válido")
+      return false
+    }
+    if (!formData.unidadeInteresse) {
+      setErrorMessage("Por favor, selecione uma unidade de interesse")
+      return false
+    }
+    return true
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+    setErrorMessage("")
+
+    if (!validateForm()) {
+      setSubmitStatus("error")
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      // Replace this URL with your Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || ""
+
+      if (!GOOGLE_SCRIPT_URL) {
+        throw new Error("Google Sheets URL not configured")
+      }
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+        }),
+      })
+
+      // Note: With no-cors mode, we can't read the response
+      // We'll assume success if no error is thrown
+      setSubmitStatus("success")
+      setFormData({
+        nome: "",
+        whatsapp: "",
+        email: "",
+        unidadeInteresse: "",
+      })
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setSubmitStatus("error")
+      setErrorMessage("Erro ao enviar formulário. Por favor, tente novamente.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const features = [
@@ -95,6 +169,22 @@ export function ContactFormSection() {
 
             <div className="max-w-2xl mx-auto">
               <div className="backdrop-blur-md bg-black/20 rounded-2xl p-8 border border-[#c9a961]/10">
+                {/* Success Message */}
+                {submitStatus === "success" && (
+                  <div className="mb-6 p-4 rounded-xl bg-green-500/20 border border-green-500/50 backdrop-blur-sm">
+                    <p className="text-green-300 text-center font-medium">
+                      ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </p>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {submitStatus === "error" && errorMessage && (
+                  <div className="mb-6 p-4 rounded-xl bg-red-500/20 border border-red-500/50 backdrop-blur-sm">
+                    <p className="text-red-300 text-center font-medium">✕ {errorMessage}</p>
+                  </div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="relative group">
                     <Input
@@ -150,9 +240,12 @@ export function ContactFormSection() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full h-16 bg-gradient-to-r from-[#c9a961] via-[#b89851] to-[#c9a961] hover:from-[#b89851] hover:via-[#c9a961] hover:to-[#b89851] text-white font-bold text-lg shadow-2xl hover:shadow-[#c9a961]/50 hover:scale-[1.02] transition-all duration-300 rounded-xl relative overflow-hidden group"
+                    disabled={isSubmitting}
+                    className="w-full h-16 bg-gradient-to-r from-[#c9a961] via-[#b89851] to-[#c9a961] hover:from-[#b89851] hover:via-[#c9a961] hover:to-[#b89851] text-white font-bold text-lg shadow-2xl hover:shadow-[#c9a961]/50 hover:scale-[1.02] transition-all duration-300 rounded-xl relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    <span className="relative z-10">RECEBER INFORMAÇÕES</span>
+                    <span className="relative z-10">
+                      {isSubmitting ? "ENVIANDO..." : "RECEBER INFORMAÇÕES"}
+                    </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   </Button>
                 </form>
