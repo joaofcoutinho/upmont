@@ -303,7 +303,7 @@ export default function QuemSomosPage() {
               {
                 icon: Building2,
                 title: "Qualidade",
-                description: "Selo de qualidade e excelência do renomado arquiteto capixaba Henrique Gasparini, em conjunto com fornecedores e todos os materiais e insumos de primeira linha.",
+                description: "Qualidade máxima do início ao fim: da seleção do terreno e projeto qualificado à obra impecável e entrega da unidade, garantindo a melhor experiência para o cliente.",
               },
               {
                 icon: Users,

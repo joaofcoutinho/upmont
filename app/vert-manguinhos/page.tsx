@@ -691,7 +691,7 @@ export default function VertManguinhosPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Churrasqueira com Cobertura</h3>
+                <h3 className="text-white font-bold text-2xl mb-2">Churrasqueira no Rooftop</h3>
                 <p className="text-white/80 text-sm">Espaço protegido para churrascos em qualquer clima</p>
               </div>
             </div>
@@ -812,7 +812,7 @@ export default function VertManguinhosPage() {
                 },
                 {
                   icon: Bike,
-                  title: "Bike Point e oficina e tomada elétrica",
+                  title: "7. ike point com oficina e prepararão tomada elétrica",
                   shortTitle: "Bike Point",
                   image: "/bike-point.jpeg",
                 },
@@ -889,7 +889,7 @@ export default function VertManguinhosPage() {
                       "MINIMERCADO Autônomo",
                       "Delivery Box Com Refrigeradores",
                       "Box Locker Privativo",
-                      "Bike Point e oficina e tomada elétrica",
+                      "Bike point com oficina e prepararão tomada elétrica",
                       "Tomadas para Veículos elétricos",
                       "Aquecimento Solar Central",
                       "Preparação para Hidro ou ofurô",

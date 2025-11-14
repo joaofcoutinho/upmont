@@ -28,7 +28,7 @@ export function HeroSection() {
         <>
           UP STUDIOS <br />
           <span className="bg-gradient-to-r from-[#c9a961] via-[#d4b76e] to-[#c9a961] bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(201,169,97,0.5)] font-bold tracking-wide">
-            Seu Short Stay no coração da Serra
+            Seu Short Stay no coração de Serra
           </span>
         </>
       ),
