@@ -10,7 +10,7 @@ export default function ContatosPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-48 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(201,169,97,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(201,169,97,0.08),transparent_50%)]" />
 
@@ -52,8 +52,7 @@ export default function ContatosPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Telefone</h3>
-                    <p className="text-gray-400">(27) 3333-4444</p>
-                    <p className="text-gray-400">(27) 99999-8888</p>
+                    <p className="text-gray-400">(27) 99297-0152</p>
                   </div>
                 </div>
 
@@ -66,6 +65,9 @@ export default function ContatosPage() {
                     <h3 className="text-white font-semibold mb-1">E-mail</h3>
                     <p className="text-gray-400">contato@upmont.com.br</p>
                     <p className="text-gray-400">vendas@upmont.com.br</p>
+                    <p className="text-gray-400">compras@upmont.com.br</p>
+                    <p className="text-gray-400">diretoria@upmont.com.br</p>
+                    <p className="text-gray-400">financeiro@upmont.com.br</p>
                   </div>
                 </div>
 

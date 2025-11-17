@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
+import { Instagram } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
@@ -99,28 +99,12 @@ export function Footer() {
             <p className="font-semibold mb-4 text-[#c9a961] tracking-wider text-xs">REDES SOCIAIS</p>
             <div className="flex gap-3">
               <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/5 backdrop-blur-sm border border-[#c9a961]/20 hover:bg-[#c9a961]/10 hover:border-[#c9a961] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#c9a961]/20 group"
-              >
-                <Facebook className="w-5 h-5 text-white/60 group-hover:text-[#c9a961] transition-colors duration-300" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/upmontincorporadora/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full bg-white/5 backdrop-blur-sm border border-[#c9a961]/20 hover:bg-[#c9a961]/10 hover:border-[#c9a961] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#c9a961]/20 group"
               >
                 <Instagram className="w-5 h-5 text-white/60 group-hover:text-[#c9a961] transition-colors duration-300" />
-              </a>
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/5 backdrop-blur-sm border border-[#c9a961]/20 hover:bg-[#c9a961]/10 hover:border-[#c9a961] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#c9a961]/20 group"
-              >
-                <Linkedin className="w-5 h-5 text-white/60 group-hover:text-[#c9a961] transition-colors duration-300" />
-              </a>
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-white/5 backdrop-blur-sm border border-[#c9a961]/20 hover:bg-[#c9a961]/10 hover:border-[#c9a961] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#c9a961]/20 group"
-              >
-                <Youtube className="w-5 h-5 text-white/60 group-hover:text-[#c9a961] transition-colors duration-300" />
               </a>
             </div>
           </div>

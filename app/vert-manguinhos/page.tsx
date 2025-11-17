@@ -915,7 +915,7 @@ export default function VertManguinhosPage() {
               </div>
 
               {/* Right Column - Image */}
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-2 space-y-2">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden border-2 border-[#c9a961]/50 shadow-2xl group">
                   <img
                     src={
@@ -934,6 +934,11 @@ export default function VertManguinhosPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                </div>
+                <div className="flex justify-end">
+                  <p className="text-sm text-white px-4 py-2 bg-black/40 backdrop-blur-sm rounded-lg border border-[#c9a961]/20">
+                    *Imagens ilustrativas
+                  </p>
                 </div>
               </div>
             </div>
@@ -990,135 +995,6 @@ export default function VertManguinhosPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Corpo Técnico Section */}
-      <section className="relative py-24 overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
-              backgroundSize: "50px 50px",
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20 fade-in-section">
-              <div className="flex items-center justify-center gap-8 md:gap-12 mb-12">
-                <img
-                  src="images/design-mode/logo-upmont.png"
-                  alt="UpMont"
-                  className="h-16 md:h-20 object-contain drop-shadow-2xl"
-                />
-                <div className="h-12 md:h-16 w-px bg-gradient-to-b from-transparent via-[#c9a961] to-transparent" />
-                <img
-                  src="/vert-manguinhos-logo.png"
-                  alt="Vert Manguinhos"
-                  className="h-16 md:h-20 object-contain drop-shadow-2xl"
-                />
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                CORPO TÉCNICO EXPERIENTE E CONSOLIDADO
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
-              {[
-                {
-                  logo: "/logo-henrique.png",
-                  title: "Projeto Arquitetônico",
-                  name: "Henrique Gasparini",
-                },
-                {
-                  logo: "/logo-ilha.png",
-                  title: "Projeto Estrutural",
-                  name: "Ilha Projetos/Eng. Bruno Sarcinelli",
-                },
-                {
-                  logo: "/logo-spin.png",
-                  title: "Projeto de Instalações",
-                  name: "SPIN Projetos",
-                },
-                {
-                  logo: "/logo-pinheiro.png",
-                  title: "Construção",
-                  name: "Pinheiro de Sá Engenharia",
-                },
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className={`fade-in-section stagger-${index + 1} group transition-all duration-500 hover:-translate-y-2`}
-                >
-                  <div className="flex items-center justify-center mb-6 md:mb-8 h-32 md:h-40 lg:h-48">
-                    <img
-                      src={tech.logo}
-                      alt={tech.name}
-                      className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-[#c9a961] font-bold text-sm md:text-base mb-3 uppercase tracking-wide">
-                      {tech.title}
-                    </h3>
-                    <p className="text-white/90 text-sm md:text-base leading-relaxed">{tech.name}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Parceiros Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-black to-neutral-950">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 opacity-5"
-            style={{
-              backgroundImage: `radial-gradient(circle at center, #c9a961 1px, transparent 1px)`,
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 fade-in-section">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                PARCEIROS INVESTIDORES
-              </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto rounded-full" />
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-              {[
-                ...Array.from({ length: 12 }, (_, i) => ({
-                  type: 'numbered',
-                  src: `/PARCEIROS VERTMANGUINHOS/${i + 1}.png`,
-                  alt: `Parceiro ${i + 1}`,
-                })),
-                { type: 'named', src: '/casa-logo.png', alt: 'Casa' },
-                { type: 'named', src: '/colora-logo.png', alt: 'Colora' },
-                { type: 'named', src: '/rede-logo.png', alt: 'Rede' },
-                { type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
-              ].map((logo, index) => (
-                <div
-                  key={index}
-                  className={`fade-in-section stagger-${(index % 6) + 1} group bg-gradient-to-br from-white to-neutral-50 p-2 rounded-2xl border-2 border-[#c9a961] hover:border-[#c9a961] hover:shadow-2xl hover:shadow-[#c9a961]/40 transition-all duration-500 hover:-translate-y-2 flex items-center justify-center min-h-[200px] md:min-h-[220px]`}
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="w-full h-full max-h-[195px] md:max-h-[215px] object-contain group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -1256,6 +1132,135 @@ export default function VertManguinhosPage() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Corpo Técnico Section */}
+      <section className="relative py-24 overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `linear-gradient(#c9a961 1px, transparent 1px), linear-gradient(90deg, #c9a961 1px, transparent 1px)`,
+              backgroundSize: "50px 50px",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20 fade-in-section">
+              <div className="flex items-center justify-center gap-8 md:gap-12 mb-12">
+                <img
+                  src="images/design-mode/logo-upmont.png"
+                  alt="UpMont"
+                  className="h-16 md:h-20 object-contain drop-shadow-2xl"
+                />
+                <div className="h-12 md:h-16 w-px bg-gradient-to-b from-transparent via-[#c9a961] to-transparent" />
+                <img
+                  src="/vert-manguinhos-logo.png"
+                  alt="Vert Manguinhos"
+                  className="h-16 md:h-20 object-contain drop-shadow-2xl"
+                />
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                CORPO TÉCNICO EXPERIENTE E CONSOLIDADO
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
+              {[
+                {
+                  logo: "/logo-henrique.png",
+                  title: "Projeto Arquitetônico",
+                  name: "Henrique Gasparini",
+                },
+                {
+                  logo: "/logo-ilha.png",
+                  title: "Projeto Estrutural",
+                  name: "Ilha Projetos/Eng. Bruno Sarcinelli",
+                },
+                {
+                  logo: "/logo-spin.png",
+                  title: "Projeto de Instalações",
+                  name: "SPIN Projetos",
+                },
+                {
+                  logo: "/logo-pinheiro.png",
+                  title: "Construção",
+                  name: "Pinheiro de Sá Engenharia",
+                },
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className={`fade-in-section stagger-${index + 1} group transition-all duration-500 hover:-translate-y-2`}
+                >
+                  <div className="flex items-center justify-center mb-6 md:mb-8 h-32 md:h-40 lg:h-48">
+                    <img
+                      src={tech.logo}
+                      alt={tech.name}
+                      className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-[#c9a961] font-bold text-sm md:text-base mb-3 uppercase tracking-wide">
+                      {tech.title}
+                    </h3>
+                    <p className="text-white/90 text-sm md:text-base leading-relaxed">{tech.name}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Parceiros Section */}
+      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-black to-neutral-950">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `radial-gradient(circle at center, #c9a961 1px, transparent 1px)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 fade-in-section">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                PARCEIROS INVESTIDORES
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto rounded-full" />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+              {[
+                ...Array.from({ length: 12 }, (_, i) => ({
+                  type: 'numbered',
+                  src: `/PARCEIROS VERTMANGUINHOS/${i + 1}.png`,
+                  alt: `Parceiro ${i + 1}`,
+                })),
+                { type: 'named', src: '/casa-logo.png', alt: 'Casa' },
+                { type: 'named', src: '/colora-logo.png', alt: 'Colora' },
+                { type: 'named', src: '/rede-logo.png', alt: 'Rede' },
+                { type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
+              ].map((logo, index) => (
+                <div
+                  key={index}
+                  className={`fade-in-section stagger-${(index % 6) + 1} group bg-gradient-to-br from-white to-neutral-50 p-2 rounded-2xl border-2 border-[#c9a961] hover:border-[#c9a961] hover:shadow-2xl hover:shadow-[#c9a961]/40 transition-all duration-500 hover:-translate-y-2 flex items-center justify-center min-h-[200px] md:min-h-[220px]`}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="w-full h-full max-h-[195px] md:max-h-[215px] object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
