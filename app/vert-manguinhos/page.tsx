@@ -1245,11 +1245,10 @@ export default function VertManguinhosPage() {
                   src: `/PARCEIROS VERTMANGUINHOS/${i + 1}.png`,
                   alt: `Parceiro ${i + 1}`,
                 })),
-                // As seguintes logos foram removidas, conforme sua solicitação:
-                // { type: 'named', src: '/casa-logo.png', alt: 'Casa' },
-                // { type: 'named', src: '/colora-logo.png', alt: 'Colora' },
-                // { type: 'named', src: '/rede-logo.png', alt: 'Rede' },
-                // { type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
+                //{ type: 'named', src: '/casa-logo.png', alt: 'Casa' },
+                //{ type: 'named', src: '/colora-logo.png', alt: 'Colora' },
+                //{ type: 'named', src: '/parceiros vertmanguinhos/3.png', alt: 'Rede' },
+                //{ type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
               ].map((logo, index) => (
                 <div
                   key={index}
