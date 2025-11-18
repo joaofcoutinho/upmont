@@ -774,7 +774,7 @@ export default function VertManguinhosPage() {
             alt="Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -1245,10 +1245,11 @@ export default function VertManguinhosPage() {
                   src: `/PARCEIROS VERTMANGUINHOS/${i + 1}.png`,
                   alt: `Parceiro ${i + 1}`,
                 })),
-                { type: 'named', src: '/casa-logo.png', alt: 'Casa' },
-                { type: 'named', src: '/colora-logo.png', alt: 'Colora' },
-                { type: 'named', src: '/rede-logo.png', alt: 'Rede' },
-                { type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
+                // As seguintes logos foram removidas, conforme sua solicitação:
+                // { type: 'named', src: '/casa-logo.png', alt: 'Casa' },
+                // { type: 'named', src: '/colora-logo.png', alt: 'Colora' },
+                // { type: 'named', src: '/rede-logo.png', alt: 'Rede' },
+                // { type: 'named', src: '/logo-henrique.png', alt: 'Henrique Gasparini' },
               ].map((logo, index) => (
                 <div
                   key={index}
