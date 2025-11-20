@@ -110,6 +110,17 @@ export function PropertySlider() {
                               }`}
                             />
 
+                            {/* Faixa Breve Lançamento - Apenas para Vert Manguinhos */}
+                            {property.name === "Vert Manguinhos" && (
+                              <div className="absolute top-8 md:top-12 -left-4 -right-4 md:-left-6 md:-right-6 rotate-[-8deg] bg-white shadow-lg z-10">
+                                <div className="py-1 md:py-2">
+                                  <h3 className="text-center text-black font-bold text-sm md:text-lg lg:text-xl tracking-wider uppercase">
+                                    Breve Lançamento
+                                  </h3>
+                                </div>
+                              </div>
+                            )}
+
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/95 to-transparent p-6 md:p-8">
                               {/* Project Name */}
                               <h3 className="text-white font-semibold text-xl md:text-2xl mb-4 tracking-wide">

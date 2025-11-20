@@ -210,18 +210,10 @@ export default function VertManguinhosPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <Building2 className="w-5 h-5 text-[#c9a961]" />
+                <Sparkles className="w-5 h-5 text-[#c9a961]" />
                 <div>
-                  <p className="text-white/60 text-xs uppercase tracking-wider">Área</p>
-                  <p className="text-white font-semibold">160 a 190 m²</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Car className="w-5 h-5 text-[#c9a961]" />
-                <div>
-                  <p className="text-white/60 text-xs uppercase tracking-wider">Vagas</p>
-                  <p className="text-white font-semibold">2 a 3 vagas</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">Status</p>
+                  <p className="text-white font-bold">Breve Lançamento</p>
                 </div>
               </div>
             </div>
@@ -232,23 +224,10 @@ export default function VertManguinhosPage() {
                   size="lg"
                   className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#c9a961]/50 shadow-xl relative overflow-hidden group"
                 >
-                  <span className="relative z-10">Tenho Interesse</span>
+                  <span className="relative z-10">Saiba Mais</span>
                   <div className="absolute inset-0 shimmer" />
                 </Button>
               </Link>
-              <a
-                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Vert%20Manguinhos."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 bg-transparent backdrop-blur-sm"
-                >
-                  Agendar Visita
-                </Button>
-              </a>
             </div>
           </div>
         </div>
@@ -464,6 +443,11 @@ export default function VertManguinhosPage() {
             <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Ambientes projetados para proporcionar conforto, lazer e bem-estar para toda a família
             </p>
+            <div className="mt-6 inline-block px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
+              <p className="text-white/60 text-sm italic">
+                *Projeto em desenvolvimento
+              </p>
+            </div>
           </div>
 
           {/* Featured Large Images */}
@@ -761,6 +745,13 @@ export default function VertManguinhosPage() {
                   ))}
                 </div>
               </div>
+
+              {/* Aviso */}
+              <div className="mt-6 p-4 bg-white/5 border border-white/10 rounded-lg">
+                <p className="text-white/60 text-sm text-center italic">
+                  *Sujeito a alterações até a aprovação final
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -937,7 +928,7 @@ export default function VertManguinhosPage() {
                 </div>
                 <div className="flex justify-end">
                   <p className="text-sm text-white px-4 py-2 bg-black/40 backdrop-blur-sm rounded-lg border border-[#c9a961]/20">
-                    *Imagens ilustrativas
+                    *Imagens meramente ilustrativas
                   </p>
                 </div>
               </div>
@@ -1353,54 +1344,6 @@ export default function VertManguinhosPage() {
                   <div className="absolute inset-0 shimmer" />
                 </Button>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Last Section Before Footer */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-900 to-[#c9a961]/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60" />
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center fade-in-section">
-            <div className="mb-8">
-              <div className="flex items-center justify-center mb-8">
-                <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#c9a961]" />
-                <div className="w-2 h-2 bg-[#c9a961] rounded-full mx-4" />
-                <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#c9a961]" />
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                Pronto para Viver nas Alturas?
-              </h2>
-              <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-                Entre em contato e descubra como o Vert Manguinhos pode ser o seu novo lar de alto padrão.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#c9a961] to-[#b89851] text-black hover:from-[#b89851] hover:to-[#a67c3c] px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-[#c9a961]/50 relative overflow-hidden group"
-                >
-                  <span className="relative z-10">Fale Conosco</span>
-                  <div className="absolute inset-0 shimmer" />
-                </Button>
-              </a>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="border-2 border-[#c9a961] text-[#c9a961] hover:bg-[#c9a961] hover:text-black px-10 py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-110 bg-transparent backdrop-blur-sm"
-              >
-                Voltar ao Início
-              </Button>
             </div>
           </div>
         </div>
