@@ -179,7 +179,7 @@ export default function ViverEmSerraPage() {
               {/* Imagem */}
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden border border-[#c9a961]/30 shadow-2xl group hover:shadow-[#c9a961]/20 transition-all duration-500">
                 <img
-                  src="/modern-building-exterior-blue-sky.png"
+                  src="/visaoaereaserra.jpeg"
                   alt="Serra - Crescimento"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

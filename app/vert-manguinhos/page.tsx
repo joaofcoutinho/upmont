@@ -405,9 +405,7 @@ export default function VertManguinhosPage() {
                   </p>
                 </div>
 
-                <div className="pt-8 mt-8 border-t border-[#c9a961]/40">
-                  <p className="text-2xl font-bold text-[#c9a961]">Total: 37 casas suspensas</p>
-                </div>
+                
               </div>
             </div>
 
@@ -445,7 +443,7 @@ export default function VertManguinhosPage() {
             </p>
             <div className="mt-6 inline-block px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
               <p className="text-white/60 text-sm italic">
-                *Projeto em desenvolvimento
+                *Projeto em desenvolvimento sujeito a alterações até aprovação final
               </p>
             </div>
           </div>
@@ -749,7 +747,7 @@ export default function VertManguinhosPage() {
               {/* Aviso */}
               <div className="mt-6 p-4 bg-white/5 border border-white/10 rounded-lg">
                 <p className="text-white/60 text-sm text-center italic">
-                  *Sujeito a alterações até a aprovação final
+                  *Projeto em desenvolvimento sujeito a alterações até aprovação final.
                 </p>
               </div>
             </div>
@@ -1224,7 +1222,7 @@ export default function VertManguinhosPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 fade-in-section">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                PARCEIROS INVESTIDORES
+                PARCEIROS
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto rounded-full" />
             </div>
