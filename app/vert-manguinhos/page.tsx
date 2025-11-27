@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Home, Car, MapPin, Building2, ShoppingCart, Sparkles, Wind, ChefHat, Armchair, Zap, Package, Lock, Bike, Wrench, Sun, Droplet, PawPrint } from "lucide-react"
 import Link from "next/link"
 import { FloorPlanCarousel, floorPlans } from "@/components/floor-plan-carousel"
+import { InteriorCarousel } from "@/components/interior-carousel"
 import { useEffect, useRef, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -441,47 +442,126 @@ export default function VertManguinhosPage() {
             <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Ambientes projetados para proporcionar conforto, lazer e bem-estar para toda a família
             </p>
-            <div className="mt-6 inline-block px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
-              <p className="text-white/60 text-sm italic">
-                *Projeto em desenvolvimento sujeito a alterações até aprovação final
-              </p>
-            </div>
           </div>
 
-          {/* Featured Large Images */}
-          <div className="mb-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
-                <img
-                  src="/vert-mezanino-01.png"
-                  alt="Mezanino com jogos"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-white font-bold text-2xl mb-2">Sala de Jogos Premium</h3>
-                  <p className="text-white/80 text-sm">Mesa de sinuca, poker e área de TV</p>
-                </div>
+          {/* Row 1 - Academia e Piscina Destaque */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/academia-vistamar.jpeg"
+                alt="Academia"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Academia com Vista pro Mar</h3>
+                <p className="text-white/80 text-sm">Equipamentos modernos para seu treino na cobertura</p>
               </div>
+            </div>
 
-              <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
-                <img
-                  src="/vert-sala-reuniao.png"
-                  alt="Sala de reunião"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-white font-bold text-2xl mb-2">Sala de Reunião Executiva</h3>
-                  <p className="text-white/80 text-sm">Espaço corporativo com tecnologia de ponta</p>
-                </div>
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/piscina-destaque.jpeg"
+                alt="Piscina"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Piscina com Vista pro Mar</h3>
+                <p className="text-white/80 text-sm">Piscina aquecida com vista panorâmica</p>
               </div>
             </div>
           </div>
 
-          {/* Bento Grid Layout */}
+          {/* Row 2 - Academia e Piscina Adicionais */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/academia-vistageral.jpeg"
+                alt="Academia - Vista 2"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Academia Completa</h3>
+                <p className="text-white/80 text-sm">Espaço amplo e bem equipado para suas atividades físicas</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/piscina.jpeg"
+                alt="Piscina - Vista 2"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Piscina na Cobertura</h3>
+                <p className="text-white/80 text-sm">Deck completo para relaxar e aproveitar o sol</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3 - Balcão Gourmet e Churrasqueira */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/Balcão gourmet completo.jpeg"
+                alt="Balcão Gourmet"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Balcão Gourmet Completo</h3>
+                <p className="text-white/80 text-sm">Área gourmet equipada com balcão para suas confraternizações</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/churrasqueira com cobertura.jpeg"
+                alt="Churrasqueira"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Churrasqueira no Rooftop</h3>
+                <p className="text-white/80 text-sm">Espaço protegido para churrascos em qualquer clima</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4 - Sala de Jogos e Sala de Reunião */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
+              <img
+                src="/vert-mezanino-01.png"
+                alt="Mezanino com jogos"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Sala de Jogos Premium</h3>
+                <p className="text-white/80 text-sm">Mesa de sinuca, poker e área de TV</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
+              <img
+                src="/vert-sala-reuniao.png"
+                alt="Sala de reunião"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-white font-bold text-2xl mb-2">Sala de Reunião Executiva</h3>
+                <p className="text-white/80 text-sm">Espaço corporativo com tecnologia de ponta</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 5 - Bento Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {/* Row 1 - 4 equal items */}
             <div className="group relative overflow-hidden rounded-2xl aspect-square border border-[#c9a961]/20 hover:border-[#c9a961]/60 transition-all duration-500 fade-in-section stagger-1">
               <img
                 src="/vert-mezanino-02.jpg"
@@ -522,12 +602,12 @@ export default function VertManguinhosPage() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition-opacity duration-500 flex items-end p-4">
-                <p className="text-white font-semibold">Pebolim</p>
+                <p className="text-white font-semibold">Futmesa</p>
               </div>
             </div>
           </div>
 
-          {/* Row 2 - Mixed sizes */}
+          {/* Row 6 - Podcast, Bicicletário e Espaço de Beleza */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-[#c9a961]/20 hover:border-[#c9a961]/60 transition-all duration-500 fade-in-section stagger-1">
               <img
@@ -563,7 +643,7 @@ export default function VertManguinhosPage() {
             </div>
           </div>
 
-          {/* Row 3 - Kids Area (2 columns) */}
+          {/* Row 7 - Brinquedoteca e Área Gourmet */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
               <img
@@ -592,90 +672,12 @@ export default function VertManguinhosPage() {
             </div>
           </div>
 
-          {/* Row 4 - Academia e Piscina Destaque */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
-              <img
-                src="/academia-vistamar.jpeg"
-                alt="Academia"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Academia com Vista pro Mar</h3>
-                <p className="text-white/80 text-sm">Equipamentos modernos para seu treino na cobertura</p>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
-              <img
-                src="/piscina-destaque.jpeg"
-                alt="Piscina"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Piscina com Vista pro Mar</h3>
-                <p className="text-white/80 text-sm">Piscina aquecida com vista panorâmica</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 5 - Academia e Piscina Adicionais */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
-              <img
-                src="/academia-vistageral.jpeg"
-                alt="Academia - Vista 2"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Academia Completa</h3>
-                <p className="text-white/80 text-sm">Espaço amplo e bem equipado para suas atividades físicas</p>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
-              <img
-                src="/piscina.jpeg"
-                alt="Piscina - Vista 2"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Piscina na Cobertura</h3>
-                <p className="text-white/80 text-sm">Deck completo para relaxar e aproveitar o sol</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 6 - Balcão Gourmet e Churrasqueira */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-1">
-              <img
-                src="/Balcão gourmet completo.jpeg"
-                alt="Balcão Gourmet"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Balcão Gourmet Completo</h3>
-                <p className="text-white/80 text-sm">Área gourmet equipada com balcão para suas confraternizações</p>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-3xl aspect-[16/10] border border-[#c9a961]/30 hover:border-[#c9a961] transition-all duration-500 shadow-2xl hover:shadow-[#c9a961]/20 fade-in-section stagger-2">
-              <img
-                src="/churrasqueira com cobertura.jpeg"
-                alt="Churrasqueira"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white font-bold text-2xl mb-2">Churrasqueira no Rooftop</h3>
-                <p className="text-white/80 text-sm">Espaço protegido para churrascos em qualquer clima</p>
-              </div>
+          {/* Aviso no final da seção */}
+          <div className="mt-12 text-center fade-in-section">
+            <div className="inline-block px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
+              <p className="text-white/60 text-sm italic">
+                *Projeto em desenvolvimento sujeito a alterações até aprovação final
+              </p>
             </div>
           </div>
         </div>
@@ -755,6 +757,29 @@ export default function VertManguinhosPage() {
         </div>
       </section>
 
+      {/* Interiores das Unidades - Coluna 1 160m² */}
+      <section className="relative py-24 bg-gradient-to-b from-neutral-950 to-black">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 fade-in-section">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Interiores da Unidade 160m²
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent mx-auto mb-8 rounded-full" />
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Explore os ambientes sofisticados e personalizados da coluna 1
+            </p>
+          </div>
+
+          <InteriorCarousel />
+
+          <div className="mt-8 p-4 bg-white/5 border border-white/10 rounded-lg max-w-2xl mx-auto">
+            <p className="text-white/60 text-sm text-center italic">
+              *Imagens ilustrativas sujeitas a alterações conforme personalização do cliente
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Amenidades Interativas Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
@@ -785,7 +810,7 @@ export default function VertManguinhosPage() {
                   icon: Package,
                   title: "MINIMERCADO Autônomo",
                   shortTitle: "Minimercado",
-                  image: "/minimercado.jpeg",
+                  image: "/minimarket.jpeg",
                 },
                 {
                   icon: Package,
@@ -909,7 +934,7 @@ export default function VertManguinhosPage() {
                   <img
                     src={
                       [
-                        "/minimercado.jpeg",
+                        "/minimarket.jpeg",
                         "/delivery-box.jpeg",
                         "/box-locker.jpeg",
                         "/bike-point.jpeg",
