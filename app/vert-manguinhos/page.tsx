@@ -810,7 +810,7 @@ export default function VertManguinhosPage() {
                   icon: Package,
                   title: "MINIMERCADO Autônomo",
                   shortTitle: "Minimercado",
-                  image: "/minimarket.jpeg",
+                  image: "/MINIMARKET.jpeg",
                 },
                 {
                   icon: Package,
@@ -934,7 +934,7 @@ export default function VertManguinhosPage() {
                   <img
                     src={
                       [
-                        "/minimarket.jpeg",
+                        "/MINIMARKET.jpeg",
                         "/delivery-box.jpeg",
                         "/box-locker.jpeg",
                         "/bike-point.jpeg",
