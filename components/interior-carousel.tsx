@@ -37,59 +37,58 @@ export function InteriorCarousel() {
   const currentImage = interiorImages[currentIndex]
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-6 fade-in-section">
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-3xl border-2 border-[#c9a961]/30 bg-black shadow-2xl">
-        <div className="relative h-[400px] md:h-[550px] lg:h-[700px] flex items-center justify-center">
-          {/* Main Image */}
-          <img
-            key={currentImage.id}
-            src={currentImage.src}
-            alt={currentImage.alt}
-            className="w-full h-full object-cover transition-opacity duration-500"
-          />
+    <div className="w-full max-w-7xl mx-auto fade-in-section">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-start">
+        {/* Main Image */}
+        <div className="relative overflow-hidden rounded-3xl border-2 border-[#c9a961]/30 bg-black shadow-2xl">
+          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
+            <img
+              key={currentImage.id}
+              src={currentImage.src}
+              alt={currentImage.alt}
+              className="w-full h-full object-cover transition-opacity duration-500"
+            />
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
-          {/* Navigation Buttons */}
-          <Button
-            onClick={prevSlide}
-            variant="outline"
-            size="icon"
-            className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 shadow-xl"
-          >
-            <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
-          </Button>
+            {/* Navigation Buttons */}
+            <Button
+              onClick={prevSlide}
+              variant="outline"
+              size="icon"
+              className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 shadow-xl"
+            >
+              <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
+            </Button>
 
-          <Button
-            onClick={nextSlide}
-            variant="outline"
-            size="icon"
-            className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 shadow-xl"
-          >
-            <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
-          </Button>
+            <Button
+              onClick={nextSlide}
+              variant="outline"
+              size="icon"
+              className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 shadow-xl"
+            >
+              <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
+            </Button>
 
-          {/* Counter Badge */}
-          <div className="absolute bottom-6 right-6 px-4 py-2 bg-black/80 backdrop-blur-sm border border-[#c9a961]/50 rounded-full">
-            <p className="text-white text-sm font-semibold">
-              {currentIndex + 1} / {interiorImages.length}
-            </p>
+            {/* Counter Badge */}
+            <div className="absolute bottom-6 right-6 px-4 py-2 bg-black/80 backdrop-blur-sm border border-[#c9a961]/50 rounded-full">
+              <p className="text-white text-sm font-semibold">
+                {currentIndex + 1} / {interiorImages.length}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Thumbnail Navigation */}
-      <div className="relative px-2">
-        <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 justify-center">
+        {/* Thumbnail Navigation - Vertical on Desktop */}
+        <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto hide-scrollbar lg:max-h-[600px] pb-2 lg:pb-0 justify-center lg:justify-start">
           {interiorImages.map((image, index) => (
             <button
               key={image.id}
               onClick={() => goToSlide(index)}
-              className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+              className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                 index === currentIndex
-                  ? "border-[#c9a961] shadow-lg shadow-[#c9a961]/50 scale-110"
+                  ? "border-[#c9a961] shadow-lg shadow-[#c9a961]/50 scale-105"
                   : "border-[#c9a961]/30 hover:border-[#c9a961]/60 hover:scale-105"
               }`}
             >
