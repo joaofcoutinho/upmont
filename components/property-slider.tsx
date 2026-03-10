@@ -14,7 +14,6 @@ const properties = [
     bedrooms: "3 e 4 suítes",
     area: "160,00 a 190,00 m²",
     parking: "2 e 3 vagas",
-    slug: "vert-manguinhos",
   },
   {
     id: 2,

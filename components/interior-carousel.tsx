@@ -40,7 +40,7 @@ export function InteriorCarousel() {
     <div className="w-full max-w-7xl mx-auto fade-in-section">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-start">
         {/* Main Image */}
-        <div className="relative overflow-hidden rounded-3xl border-2 border-[#c9a961]/30 bg-black shadow-2xl">
+        <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 shadow-2xl bg-neutral-900">
           <div className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
             <img
               key={currentImage.id}

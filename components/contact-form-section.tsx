@@ -58,34 +58,25 @@ export function ContactFormSection() {
     setSubmitStatus("idle")
 
     try {
-      // Replace this URL with your Google Apps Script Web App URL
-      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || ""
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, origem: "home" }),
+      })
 
-      if (!GOOGLE_SCRIPT_URL) {
-        throw new Error("Google Sheets URL not configured")
+      // Enviar também para Google Sheets se configurado
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || ""
+      if (GOOGLE_SCRIPT_URL) {
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...formData, timestamp: new Date().toISOString() }),
+        }).catch(() => {})
       }
 
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-        }),
-      })
-
-      // Note: With no-cors mode, we can't read the response
-      // We'll assume success if no error is thrown
       setSubmitStatus("success")
-      setFormData({
-        nome: "",
-        whatsapp: "",
-        email: "",
-        unidadeInteresse: "",
-      })
+      setFormData({ nome: "", whatsapp: "", email: "", unidadeInteresse: "" })
     } catch (error) {
       console.error("Error submitting form:", error)
       setSubmitStatus("error")

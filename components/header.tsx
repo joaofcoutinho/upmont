@@ -28,19 +28,6 @@ export function Header() {
     "historia": "/quem-somos",
     "upmont": "/quem-somos",
 
-    // Vert Manguinhos
-    "vert": "/vert-manguinhos",
-    "vert manguinhos": "/vert-manguinhos",
-    "manguinhos": "/vert-manguinhos",
-    "empreendimento": "/vert-manguinhos",
-    "apartamento": "/vert-manguinhos",
-    "verthouses": "/vert-manguinhos",
-    "casas suspensas": "/vert-manguinhos",
-    "3 suites": "/vert-manguinhos",
-    "4 suites": "/vert-manguinhos",
-    "plantas": "/vert-manguinhos",
-    "lazer": "/vert-manguinhos",
-
     // Viver em Serra
     "viver": "/viver-em-serra",
     "serra": "/viver-em-serra",
@@ -225,14 +212,6 @@ export function Header() {
             </Link>
 
             <Link
-              href="/vert-manguinhos"
-              className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
-            >
-              VERT MANGUINHOS
-              <span className="absolute bottom-[-16px] left-0 w-0 h-0.5 bg-[#c9a961] group-hover:w-full transition-all duration-300"></span>
-            </Link>
-
-            <Link
               href="/viver-em-serra"
               className="text-white hover:text-[#c9a961] transition-all duration-300 relative group"
             >
@@ -259,9 +238,6 @@ export function Header() {
               </Link>
               <Link href="/quem-somos" className="text-white hover:text-[#c9a961] transition-colors">
                 QUEM SOMOS
-              </Link>
-              <Link href="/vert-manguinhos" className="text-white hover:text-[#c9a961] transition-colors">
-                VERT MANGUINHOS
               </Link>
               <Link href="/viver-em-serra" className="text-white hover:text-[#c9a961] transition-colors">
                 VIVER EM SERRA

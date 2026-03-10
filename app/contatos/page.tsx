@@ -1,8 +1,8 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
+import { ContatosForm } from "@/components/contatos-form"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export default function ContatosPage() {
   return (
@@ -98,66 +98,7 @@ export default function ContatosPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-[#c9a961]/20 p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Envie sua Mensagem</h2>
-
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Nome Completo
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 bg-black/40 border border-[#c9a961]/30 rounded-lg text-white placeholder:text-gray-500 focus:outline-none focus:border-[#c9a961] focus:ring-1 focus:ring-[#c9a961] transition-all duration-300"
-                    placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    E-mail
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 bg-black/40 border border-[#c9a961]/30 rounded-lg text-white placeholder:text-gray-500 focus:outline-none focus:border-[#c9a961] focus:ring-1 focus:ring-[#c9a961] transition-all duration-300"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 bg-black/40 border border-[#c9a961]/30 rounded-lg text-white placeholder:text-gray-500 focus:outline-none focus:border-[#c9a961] focus:ring-1 focus:ring-[#c9a961] transition-all duration-300"
-                    placeholder="(00) 00000-0000"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Mensagem
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className="w-full px-4 py-3 bg-black/40 border border-[#c9a961]/30 rounded-lg text-white placeholder:text-gray-500 focus:outline-none focus:border-[#c9a961] focus:ring-1 focus:ring-[#c9a961] transition-all duration-300 resize-none"
-                    placeholder="Como podemos ajudá-lo?"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-[#c9a961] to-[#b89851] hover:from-[#b89851] hover:to-[#a67c3c] text-black font-semibold py-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.4)] hover:scale-[1.02]"
-                >
-                  Enviar Mensagem
-                </Button>
-              </form>
-            </div>
+            <ContatosForm />
           </div>
         </div>
       </section>
