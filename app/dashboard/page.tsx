@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
+import { useRouter } from "next/navigation"
 import type { Lead } from "@/lib/leads-store"
 import Image from "next/image"
 
@@ -57,11 +58,17 @@ function downloadCSV(leads: Lead[]) {
 }
 
 export default function DashboardPage() {
+  const router = useRouter()
   const [leads, setLeads] = useState<Lead[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<"todos" | "home" | "contatos">("todos")
   const [search, setSearch] = useState("")
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
+
+  const handleLogout = async () => {
+    await fetch("/api/dashboard/logout", { method: "POST" })
+    router.push("/dashboard/login")
+  }
 
   const fetchLeads = useCallback(async () => {
     try {
@@ -127,6 +134,13 @@ export default function DashboardPage() {
               className="px-4 py-2 rounded-lg bg-[#c9a961] text-black text-sm font-semibold hover:bg-[#b89851] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Exportar CSV
+            </button>
+            <div className="w-px h-6 bg-white/10" />
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 rounded-lg border border-white/10 text-white/40 text-sm hover:text-white hover:border-white/30 transition-colors"
+            >
+              Sair
             </button>
           </div>
         </div>
