@@ -108,7 +108,7 @@ export function Header() {
     <header className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/50 via-black/30 to-transparent backdrop-blur-xl border-b border-[#c9a961]/10">
       <div className="container mx-auto px-4 relative z-10">
         {/* Top Row: Button, Logo, Search */}
-        <div className="flex items-center justify-between py-4 border-b border-[#c9a961]/10">
+        <div className="relative flex items-center justify-between py-4 border-b border-[#c9a961]/10">
           {/* Left: Fale com a UpMont Button */}
           <a
             href="https://wa.me/5527992970152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20empreendimentos%20da%20UpMont."
@@ -123,8 +123,8 @@ export function Header() {
             </Button>
           </a>
 
-          {/* Center: Logo */}
-          <Link href="/" className="flex flex-col items-center group cursor-pointer">
+          {/* Center: Logo — absolutamente centralizada */}
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center group cursor-pointer">
             <div className="transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/upmont-logo-white.png"

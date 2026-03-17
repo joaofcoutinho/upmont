@@ -2,7 +2,6 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 import { Button } from "@/components/ui/button"
 import {
   TrendingUp,
@@ -110,7 +109,7 @@ export default function ViverEmSerraPage() {
       <section className="relative min-h-screen overflow-hidden pt-24">
         <div className="absolute inset-0">
           <img
-            src="/praia de manguinhos.jpg"
+            src="/praia-de-manguinhos.jpg"
             alt="Praia de Manguinhos - Serra/ES"
             className="w-full h-full object-cover"
           />
@@ -492,7 +491,6 @@ export default function ViverEmSerraPage() {
       </section>
 
       <Footer />
-      <WhatsAppFloatButton />
     </main>
   )
 }

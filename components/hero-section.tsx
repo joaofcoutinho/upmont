@@ -57,7 +57,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-36">
       {backgroundImages.map((image, index) => (
         <div
           key={image}
@@ -79,31 +79,24 @@ export function HeroSection() {
       ))}
 
       <div className="absolute inset-0 hidden md:block">
-        <div
-          className="absolute inset-0 bg-black/60 transition-all duration-[2000ms] ease-in-out"
-          style={{
-            clipPath: "polygon(0 0, 65% 0, 45% 100%, 0 100%)",
-            opacity: 0.8,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-black/10" />
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 md:hidden" />
 
       <div className="relative z-10 container px-6 md:px-12 lg:px-16 flex items-center justify-start h-full">
         <div className="max-w-2xl text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.2] mb-8 transition-opacity duration-700 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] tracking-tight">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white leading-[1.2] mb-6 transition-opacity duration-700 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] tracking-tight">
             <span className="block">{slideContent[currentImageIndex].title}</span>
           </h1>
 
-          <p className="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed mb-10 max-w-xl font-light mx-auto md:mx-0 transition-opacity duration-700">
+          <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed mb-8 max-w-lg font-light mx-auto md:mx-0 transition-opacity duration-700">
             {slideContent[currentImageIndex].description}
           </p>
 
           <div className="flex justify-center md:justify-start">
             <a href="/#contato">
-              <button className="group px-10 py-4 border-2 border-[#c9a961] text-white hover:bg-[#c9a961] transition-all duration-300 rounded-lg text-lg md:text-xl font-medium shadow-lg hover:shadow-[#c9a961]/20">
+              <button className="group px-8 py-3 border-2 border-[#c9a961] text-white hover:bg-[#c9a961] transition-all duration-300 rounded-lg text-base md:text-lg font-medium shadow-lg hover:shadow-[#c9a961]/20">
                 Tenho Interesse
               </button>
             </a>

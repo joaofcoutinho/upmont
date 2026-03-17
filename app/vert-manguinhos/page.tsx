@@ -8,7 +8,6 @@ import { InteriorCarousel } from "@/components/interior-carousel"
 import { useEffect, useRef, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 
 export default function VertManguinhosPage() {
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -1373,7 +1372,6 @@ export default function VertManguinhosPage() {
       </section>
 
       <Footer />
-      <WhatsAppFloatButton />
     </main>
   )
 }
