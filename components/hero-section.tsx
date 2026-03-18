@@ -7,7 +7,6 @@ export function HeroSection() {
 
   const backgroundImages = [
     "/1-slide-eleve-seu-padrao-de-viver.png",
-    "/modern-building-exterior-blue-sky.png",
     "/3-slide-verthouses-manguinhos.png",
   ]
 
@@ -22,18 +21,6 @@ export function HeroSection() {
         </>
       ),
       description: "Transformamos espaços em experiências para viver e ativos para investir.",
-    },
-    {
-      title: (
-        <>
-          UP STUDIOS <br />
-          <span className="bg-gradient-to-r from-[#c9a961] via-[#d4b76e] to-[#c9a961] bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(201,169,97,0.5)] font-bold tracking-wide">
-            Seu Short Stay no coração de Serra
-          </span>
-        </>
-      ),
-      description:
-        "Compactos, completos e estratégicos. Perfeitos para uso e rentabilidade. Unidades de 36m2 com minimercado, lavanderia, academia, piscina e mais.",
     },
     {
       title: (
@@ -72,7 +59,7 @@ export function HeroSection() {
             alt="UPMONT Building"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: index === 0 ? "center 45%" : index === 1 ? "center 80%" : "center 65%",
+              objectPosition: index === 0 ? "center 45%" : "center 65%",
             }}
           />
         </div>
