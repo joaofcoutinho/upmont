@@ -39,7 +39,7 @@ export function ContactFormSection() {
       return false
     }
     if (!formData.unidadeInteresse) {
-      setErrorMessage("Por favor, selecione uma unidade de interesse")
+      setErrorMessage("Por favor, selecione um perfil")
       return false
     }
     return true
@@ -213,17 +213,17 @@ export function ContactFormSection() {
                       onValueChange={(value) => setFormData({ ...formData, unidadeInteresse: value })}
                     >
                       <SelectTrigger className="bg-white/5 backdrop-blur-sm border border-white/20 h-14 md:h-16 text-white/40 text-base md:text-lg focus:border-[#c9a961] focus:ring-2 focus:ring-[#c9a961]/30 focus:bg-white/10 transition-all duration-300 rounded-xl data-[state=open]:border-[#c9a961]">
-                        <SelectValue placeholder="UNIDADE DE INTERESSE" />
+                        <SelectValue placeholder="PERFIL" />
                       </SelectTrigger>
                       <SelectContent className="bg-black/95 backdrop-blur-lg border-[#c9a961]/30">
-                        <SelectItem value="4-suites" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
-                          4 suítes
+                        <SelectItem value="corretor" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                          Corretor
                         </SelectItem>
-                        <SelectItem value="3-suites" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
-                          3 suítes
+                        <SelectItem value="investimento" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                          Investimento
                         </SelectItem>
-                        <SelectItem value="studios" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
-                          Studios
+                        <SelectItem value="moradia" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                          Moradia
                         </SelectItem>
                       </SelectContent>
                     </Select>
