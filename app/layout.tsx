@@ -31,6 +31,18 @@ export default function RootLayout({
           src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/cf247fa1-c9c8-435d-8c72-68b3228754da-loader.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PGLBWZ4WB9"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PGLBWZ4WB9');
+          `}
+        </Script>
       </body>
     </html>
   )
