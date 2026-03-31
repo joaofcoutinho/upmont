@@ -216,13 +216,13 @@ export function ContactFormSection() {
                         <SelectValue placeholder="PERFIL" />
                       </SelectTrigger>
                       <SelectContent className="bg-black/95 backdrop-blur-lg border-[#c9a961]/30">
-                        <SelectItem value="corretor" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                        <SelectItem value="Corretor" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
                           Corretor
                         </SelectItem>
-                        <SelectItem value="investimento" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                        <SelectItem value="Investimento" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
                           Investimento
                         </SelectItem>
-                        <SelectItem value="moradia" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
+                        <SelectItem value="Moradia" className="text-white hover:bg-[#c9a961]/50 focus:bg-[#c9a961]/50 hover:text-white focus:text-white cursor-pointer">
                           Moradia
                         </SelectItem>
                       </SelectContent>
