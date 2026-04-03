@@ -77,6 +77,9 @@ export function ContactFormSection() {
 
       setSubmitStatus("success")
       setFormData({ nome: "", whatsapp: "", email: "", unidadeInteresse: "" })
+
+      const msg = encodeURIComponent("Olá! Acabei de preencher o formulário no site e gostaria de saber mais sobre os empreendimentos da UpMont.")
+      window.open(`https://wa.me/5527992970152?text=${msg}`, "_blank")
     } catch (error) {
       console.error("Error submitting form:", error)
       setSubmitStatus("error")
