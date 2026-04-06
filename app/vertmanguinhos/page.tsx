@@ -155,7 +155,7 @@ export default function VertManguinhosNovoPage() {
           {/* Centro — logo + conteúdo */}
           <div className="flex flex-col gap-8">
             <img
-              src="/vertmanguinhos-logo-escura.png"
+              src="/logo-nova-vertmanguinhos.png"
               alt="Vert Manguinhos"
               className="hero-logo w-full max-w-[280px] md:max-w-[320px] h-auto object-contain brightness-0 invert"
             />
@@ -788,7 +788,7 @@ export default function VertManguinhosNovoPage() {
             <div className="flex items-center justify-center gap-8 mb-10">
               <img src="/upmont-escuro.png" alt="UpMont" className="h-12 object-contain" />
               <div className="h-8 w-px bg-[#c9a961]/40" />
-              <img src="/vertmanguinhos-logo-escura.png" alt="Vert Manguinhos" className="h-12 object-contain" />
+              <img src="/logo-nova-vertmanguinhos-escura.png" alt="Vert Manguinhos" className="h-12 object-contain" />
             </div>
             <span className="text-[#c9a961] text-[10px] uppercase tracking-[0.3em] font-semibold mb-4 block">Time</span>
             <h2 className="text-4xl md:text-5xl font-thin text-[#1a1a14] mb-3" style={{fontFamily:'Georgia, serif'}}>Corpo Técnico de Excelência</h2>
