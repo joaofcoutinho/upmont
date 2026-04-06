@@ -886,7 +886,7 @@ export default function VertManguinhosNovoPage() {
         <div className="relative z-10 w-full pb-20 md:pb-28">
           <div className="container mx-auto px-8 md:px-16 text-center">
             <div className="fi max-w-3xl mx-auto">
-              <img src="/vert-manguinhos-logo.png" alt="Vert Manguinhos"
+              <img src="/logo-nova-vertmanguinhos.png" alt="Vert Manguinhos"
                 className="h-16 w-auto mx-auto mb-10 drop-shadow-2xl" />
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-thin text-white mb-6 leading-tight" style={{fontFamily:'Georgia, serif'}}>
                 Nosso primeiro lançamento.<br />Nossa maior declaração.
