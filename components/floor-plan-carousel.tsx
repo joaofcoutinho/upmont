@@ -113,7 +113,7 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
   return (
     <div className="w-full space-y-6">
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 bg-black">
+      <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 bg-[#f5f0e8]">
         <div className="relative min-h-[400px] md:min-h-[550px] lg:min-h-[700px] flex items-center justify-center">
           <img
             src={currentPlan.image || "/placeholder.svg"}
@@ -125,32 +125,38 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
             }`}
           />
 
-          {/* Navigation Buttons */}
+        </div>
+
+        {/* Navigation dots + arrows — bottom */}
+        <div className="flex items-center justify-center gap-4 py-4 bg-[#f5f0e8]">
           <Button
             onClick={prevSlide}
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm"
+            className="w-8 h-8 rounded-full bg-white border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-[#1a1a14] hover:text-white transition-all duration-300 shadow-sm"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-4 h-4" />
           </Button>
+
+          <div className="flex gap-2">
+            {floorPlans.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => externalIndex !== undefined ? onIndexChange?.(i) : setInternalIndex(i)}
+                className={`rounded-full transition-all duration-300 ${i === currentIndex ? 'w-5 h-2 bg-[#c9a961]' : 'w-2 h-2 bg-[#c9a961]/30 hover:bg-[#c9a961]/60'}`}
+              />
+            ))}
+          </div>
 
           <Button
             onClick={nextSlide}
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/80 border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-white transition-all duration-300 backdrop-blur-sm"
+            className="w-8 h-8 rounded-full bg-white border-[#c9a961]/50 hover:bg-[#c9a961] hover:border-[#c9a961] text-[#1a1a14] hover:text-white transition-all duration-300 shadow-sm"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-4 h-4" />
           </Button>
         </div>
-      </div>
-
-      {/* Counter */}
-      <div className="text-center">
-        <p className="text-white/60 text-sm">
-          {currentIndex + 1} / {floorPlans.length}
-        </p>
       </div>
     </div>
   )
