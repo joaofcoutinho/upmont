@@ -113,7 +113,7 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
   return (
     <div className="w-full space-y-6">
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 bg-[#f5f0e8]">
+      <div className="relative overflow-hidden rounded-3xl border border-[#c9a961]/30 bg-[#6A6054]">
         <div className="relative min-h-[400px] md:min-h-[550px] lg:min-h-[700px] flex items-center justify-center">
           <img
             src={currentPlan.image || "/placeholder.svg"}
@@ -128,7 +128,7 @@ export function FloorPlanCarousel({ onIndexChange, currentIndex: externalIndex }
         </div>
 
         {/* Navigation dots + arrows — bottom */}
-        <div className="flex items-center justify-center gap-4 py-4 bg-[#f5f0e8]">
+        <div className="flex items-center justify-center gap-4 py-4 bg-[#6A6054]">
           <Button
             onClick={prevSlide}
             variant="outline"
