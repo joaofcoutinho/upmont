@@ -83,7 +83,14 @@ export default function VertManguinhosNovoPage() {
       { threshold: 0.08, rootMargin: "0px 0px -50px 0px" }
     )
     document.querySelectorAll(".fi").forEach((el) => observerRef.current?.observe(el))
-    return () => observerRef.current?.disconnect()
+
+    const numObserver = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("num-in"); numObserver.unobserve(e.target) } }),
+      { threshold: 0.3 }
+    )
+    document.querySelectorAll(".num-item").forEach((el) => numObserver.observe(el))
+
+    return () => { observerRef.current?.disconnect(); numObserver.disconnect() }
   }, [])
 
   return (
@@ -172,21 +179,39 @@ export default function VertManguinhosNovoPage() {
 
         /* ── Hero entrance animations ── */
         @keyframes heroFadeUp {
-          from { opacity: 0; transform: translateY(32px); }
+          from { opacity: 0; transform: translateY(36px); }
           to   { opacity: 1; transform: translateY(0); }
         }
         @keyframes heroFadeIn {
           from { opacity: 0; }
           to   { opacity: 1; }
         }
-        .hero-bg    { animation: heroFadeIn  1.2s ease forwards; }
-        .hero-logo  { opacity: 0; animation: heroFadeUp 0.9s cubic-bezier(.4,0,.2,1) 0.3s forwards; }
-        .hero-line  { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.4,0,.2,1) 0.9s forwards; }
-        .hero-text  { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.4,0,.2,1) 1.2s forwards; }
-        .hero-tags  { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.4,0,.2,1) 1.5s forwards; }
-        .hero-cta   { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.4,0,.2,1) 1.8s forwards; }
-        .hero-badge { opacity: 0; animation: heroFadeIn 0.6s ease 2.1s forwards; }
-        .hero-title { text-shadow: 0 2px 24px rgba(255,255,255,0.55), 0 1px 4px rgba(255,255,255,0.35); }
+        @keyframes heroSlideLeft {
+          from { opacity: 0; transform: translateX(-28px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        .hero-bg       { animation: heroFadeIn   1.4s ease forwards; }
+        .hero-overlay  { opacity: 0; animation: heroFadeIn   1.0s ease 0.3s forwards; }
+        .hero-logo     { opacity: 0; animation: heroSlideLeft 0.9s cubic-bezier(.4,0,.2,1) 0.5s forwards; }
+        .hero-t1       { opacity: 0; animation: heroFadeUp   0.7s cubic-bezier(.4,0,.2,1) 1.0s forwards; }
+        .hero-t2       { opacity: 0; animation: heroFadeUp   0.7s cubic-bezier(.4,0,.2,1) 1.2s forwards; }
+        .hero-t3       { opacity: 0; animation: heroFadeUp   0.7s cubic-bezier(.4,0,.2,1) 1.4s forwards; }
+        .hero-t4       { opacity: 0; animation: heroFadeUp   0.7s cubic-bezier(.4,0,.2,1) 1.6s forwards; }
+        .hero-cta      { opacity: 0; animation: heroFadeUp   0.7s cubic-bezier(.4,0,.2,1) 1.9s forwards; }
+        .hero-videocta { opacity: 0; animation: heroFadeIn   0.8s ease 2.3s forwards; }
+        .hero-title    { text-shadow: 0 2px 24px rgba(255,255,255,0.55), 0 1px 4px rgba(255,255,255,0.35); }
+
+        /* ── Faixa de números ── */
+        @keyframes numFadeUp {
+          from { opacity: 0; transform: translateY(28px) scale(0.92); }
+          to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .num-item { opacity: 0; }
+        .num-item.num-in { animation: numFadeUp 0.7s cubic-bezier(.4,0,.2,1) forwards; }
+        .num-item:nth-child(1).num-in { animation-delay: 0.0s; }
+        .num-item:nth-child(2).num-in { animation-delay: 0.15s; }
+        .num-item:nth-child(3).num-in { animation-delay: 0.30s; }
+        .num-item:nth-child(4).num-in { animation-delay: 0.45s; }
       `}</style>
 
       {/* Spacer para compensar o header absolute */}
@@ -201,19 +226,19 @@ export default function VertManguinhosNovoPage() {
           className="hero-bg absolute inset-0 w-full h-full object-cover object-right"
         />
         {/* Overlay gradiente esquerda → transparente para dar contraste ao texto */}
-        <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.5) 28%, rgba(255,255,255,0.1) 42%, transparent 52%)' }} />
+        <div className="hero-overlay absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.5) 28%, rgba(255,255,255,0.1) 42%, transparent 52%)' }} />
         {/* Conteúdo central */}
         <div className="relative z-10 flex-1 flex items-center px-8 md:px-16 lg:px-24 pt-16">
-          <div className="hero-text flex flex-col leading-none gap-0 max-w-xl">
+          <div className="flex flex-col leading-none gap-0 max-w-xl">
             <img
               src="/_6A6054.png"
               alt="Vert Manguinhos"
-              className="w-auto h-36 md:h-48 lg:h-56 object-contain object-left mb-8 self-start drop-shadow-md"
+              className="hero-logo w-auto h-36 md:h-48 lg:h-56 object-contain object-left mb-8 self-start drop-shadow-md"
             />
-            <span className="hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">UM</span>
-            <span className="hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight uppercase leading-[1.05]">REFÚGIO</span>
-            <span className="hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">NA SUA</span>
-            <span className="hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">CASA</span>
+            <span className="hero-t1 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">UM</span>
+            <span className="hero-t2 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight uppercase leading-[1.05]">REFÚGIO</span>
+            <span className="hero-t3 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">NA SUA</span>
+            <span className="hero-t4 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">CASA</span>
             <div className="hero-cta mt-10">
               <a href={whatsapp} target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#6B6054] text-white text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full px-10 py-5 hover:bg-[#6B6054]/85 shadow-lg shadow-[#6B6054]/30 transition-all duration-300 text-center">
@@ -224,7 +249,7 @@ export default function VertManguinhosNovoPage() {
           </div>
         </div>
         {/* CTA de vídeo — rodapé do hero */}
-        <div className="hero-cta relative z-10 flex items-center justify-center gap-4 pb-10">
+        <div className="hero-videocta relative z-10 flex items-center justify-center gap-4 pb-10">
           <div className="w-px h-8 bg-[#6B6054]/40" />
           <a href="/vertmanguinhos-novo/video.mp4" target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-3 text-[#6B6054] hover:gap-4 transition-all duration-300 group">
@@ -249,7 +274,7 @@ export default function VertManguinhosNovoPage() {
               { num: "190", unit: "m² área máxima" },
               { num: "25+", unit: "anos de arquitetura" },
             ].map((s, i) => (
-              <div key={i} className={`fi d${i+1} text-center`}>
+              <div key={i} className="num-item text-center">
                 <div className="text-4xl md:text-5xl font-thin text-white mb-1">{s.num}</div>
                 <div className="text-white/80 text-xs font-light tracking-wide uppercase">{s.unit}</div>
               </div>
@@ -370,19 +395,10 @@ export default function VertManguinhosNovoPage() {
             <p className="text-[#6A6054] mt-6 font-light max-w-xl mx-auto text-sm">Ambientes projetados para proporcionar conforto, lazer e bem-estar para toda a família</p>
           </div>
 
-          {/* Linha 1 — altura fixa compartilhada */}
+          {/* Linha 1 — Área Gourmet + Academia (grandes) */}
           <div className="grid grid-cols-12 gap-3 mb-3" style={{height: '480px'}}>
             <div className="col-span-12 md:col-span-7 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
-              <img src={`${B}/Rectangle%208568.jpg`} alt="Piscina rooftop"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-7">
-                <p className="text-[#6A6054] text-[10px] uppercase tracking-widest mb-1">Cobertura</p>
-                <h3 className="text-white font-light text-xl">Piscina Rooftop com Vista para o Mar</h3>
-              </div>
-            </div>
-            <div className="col-span-12 md:col-span-5 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
-              <img src={`${B}/dfsdf.jpg`} alt="Área gourmet social"
+              <img src={`${B}/dfsdf.jpg`} alt="Área Gourmet"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 p-7">
@@ -390,50 +406,59 @@ export default function VertManguinhosNovoPage() {
                 <h3 className="text-white font-light text-xl">Área Gourmet</h3>
               </div>
             </div>
+            <div className="col-span-12 md:col-span-5 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
+              <img src="/academia-vistamar.jpeg" alt="Academia"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-7">
+                <h3 className="text-white font-light text-xl">Academia com Vista</h3>
+              </div>
+            </div>
           </div>
 
-          {/* Linha 2 — altura fixa compartilhada */}
-          <div className="grid grid-cols-12 gap-3 mb-3" style={{height: '380px'}}>
-            <div className="col-span-12 md:col-span-4 group relative overflow-hidden rounded-2xl fi h-52 md:h-auto">
-              <img src="/academia-vistamar.jpeg" alt="Academia"
+          {/* Linha 2 — Salão de Jogos + Sala Executiva + Espaço Beleza (grandes) */}
+          <div className="grid grid-cols-12 gap-3 mb-3" style={{height: '420px'}}>
+            <div className="col-span-12 md:col-span-5 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
+              <img src="/vert-mezanino-01.png" alt="Salão de Jogos"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <h3 className="text-white font-light text-lg">Academia com Vista</h3>
+              <div className="absolute bottom-0 left-0 p-7">
+                <h3 className="text-white font-light text-xl">Salão de Jogos</h3>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-4 group relative overflow-hidden rounded-2xl fi h-52 md:h-auto">
-              <img src={`${B}/sd.jpg`} alt="Piscina kids"
+            <div className="col-span-12 md:col-span-4 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
+              <img src="/vert-sala-reuniao.png" alt="Sala Executiva"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <h3 className="text-white font-light text-lg">Para as Crianças</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-7">
+                <h3 className="text-white font-light text-xl">Sala Executiva</h3>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-4 group relative overflow-hidden rounded-2xl fi h-52 md:h-auto">
-              <img src={`${B}/dfdsf.jpg`} alt="Família"
+            <div className="col-span-12 md:col-span-3 group relative overflow-hidden rounded-2xl fi h-64 md:h-auto">
+              <img src="/vert-espaco-beleza.png" alt="Espaço Beleza"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <h3 className="text-white font-light text-lg">A 5 minutos do Mar</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-7">
+                <h3 className="text-white font-light text-xl">Espaço Beleza</h3>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+          {/* Linha 3 — demais, menores */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
             {[
-              { img: "/vert-mezanino-01.png", label: "Sala de Jogos" },
-              { img: "/vert-sala-reuniao.png", label: "Sala Executiva" },
+              { img: `${B}/Rectangle%208568.jpg`, label: "Piscina Rooftop" },
+              { img: `${B}/sd.jpg`, label: "Para as Crianças" },
+              { img: `${B}/dfdsf.jpg`, label: "A 5 minutos do Mar" },
               { img: "/vert-podcast.png", label: "Podcast Studio" },
               { img: "/vert-bicicletario.png", label: "Bicicletário" },
-              { img: "/vert-espaco-beleza.png", label: "Espaço Beleza" },
               { img: "/vert-brinquedoteca-01.png", label: "Brinquedoteca" },
             ].map((item, i) => (
-              <div key={i} className={`fi d${(i % 6) + 1} group relative overflow-hidden rounded-2xl aspect-square`}>
+              <div key={i} className={`fi d${(i % 6) + 1} group relative overflow-hidden rounded-xl`} style={{height: '130px'}}>
                 <img src={item.img} alt={item.label}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-3">
-                  <p className="text-white text-xs font-light">{item.label}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex items-end p-2">
+                  <p className="text-white text-[10px] font-light">{item.label}</p>
                 </div>
               </div>
             ))}
@@ -476,18 +501,22 @@ export default function VertManguinhosNovoPage() {
                 desc: "Edificamos com materiais e métodos que resistem ao tempo, gerando valorização real para quem investe."
               },
             ].map((item, i) => (
-              <div key={i} className={`fi d${i+1} group rounded-2xl overflow-hidden border border-white/20 hover:border-white/50 hover:shadow-xl transition-all duration-500`}>
-                <div className="relative h-52 overflow-hidden">
+              <div key={i} className={`fi d${i+1} group rounded-2xl overflow-hidden border border-white/20 hover:border-white/50 hover:shadow-xl transition-all duration-500 flex flex-col`}>
+                {/* Imagem — zoom no hover, altura fixa */}
+                <div className="relative overflow-hidden h-56 flex-shrink-0">
                   <img src={item.img} alt={item.word}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-5">
                     <h3 className="text-white font-light text-2xl tracking-widest">{item.word}</h3>
                   </div>
                 </div>
-                <div className="p-6" style={{backgroundColor: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)'}}>
+                {/* Texto — ocupa o resto do card igualmente */}
+                <div className="flex-1 p-6" style={{backgroundColor: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)'}}>
                   <p className="text-white text-sm font-medium mb-3 italic">{item.sub}</p>
-                  <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
+                  <div className="overflow-hidden max-h-0 group-hover:max-h-24 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                    <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
