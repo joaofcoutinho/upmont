@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import {
   Home, Car, MapPin, Building2, Sparkles, Wind, ChefHat,
-  Armchair, Zap, Package, Lock, Bike, Sun, Droplet, PawPrint, CheckCircle2, ArrowRight
+  Armchair, Zap, Package, Lock, Bike, Sun, Droplet, PawPrint, CheckCircle2, ArrowRight, Play
 } from "lucide-react"
 import { FloorPlanCarousel, floorPlans } from "@/components/floor-plan-carousel"
 import { InteriorCarousel } from "@/components/interior-carousel"
@@ -15,56 +15,45 @@ const B = "/vertmanguinhos-novo/Imagens%20VertManguinhos"
 
 function VideoSection() {
   const [playing, setPlaying] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-      setPlaying(true)
-    }
-  }
+  const videoId = "CgK3cPxuacY"
 
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center gap-8 overflow-hidden">
+    <section className={`relative flex flex-col overflow-hidden transition-all duration-500 ${playing ? "h-screen" : "min-h-[80vh]"}`}>
       <img src="/vertmanguinhos-novo/Imagens%20VertManguinhos/image%20287.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
-      <div className="absolute inset-0 bg-black/40" />
-      {/* Copy */}
+      <div className="absolute inset-0 bg-black/50" />
+
       {!playing && (
-        <div className="relative z-10 text-center">
-          <p className="text-white/60 text-[10px] uppercase tracking-[0.3em] font-semibold mb-3">Vídeo</p>
+        <div className="relative z-10 flex flex-col justify-center h-full min-h-[80vh] px-10 md:px-20 lg:px-28 py-20 max-w-2xl">
+          <p className="text-white/60 text-[10px] uppercase tracking-[0.3em] font-semibold mb-4">Vídeo</p>
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-4 leading-tight">
             Veja o Vert Manguinhos<br />com seus próprios olhos.
           </h2>
-          <p className="text-white/60 text-sm font-light">Clique no play e descubra cada detalhe deste empreendimento único.</p>
-        </div>
-      )}
-
-      {/* Botão + Player */}
-      <div className="relative z-10 w-full max-w-5xl px-6 md:px-12 lg:px-20">
-        {!playing ? (
-          <div
-            className="flex items-center justify-center cursor-pointer"
-            onClick={handlePlay}
+          <p className="text-white/60 text-sm font-light mb-10">Clique no play e descubra cada detalhe deste empreendimento único.</p>
+          <button
+            onClick={() => setPlaying(true)}
+            className="group flex items-center gap-4 bg-[#6B6054] hover:bg-[#6B6054]/90 text-white px-7 py-4 rounded-xl shadow-xl shadow-[#6B6054]/30 transition-all duration-300 hover:scale-[1.03]"
           >
-            <div className="w-24 h-24 rounded-full bg-[#6B6054] flex items-center justify-center hover:bg-[#6B6054]/85 shadow-xl shadow-[#6B6054]/30 transition-all duration-300">
-              <svg className="w-10 h-10 text-white ml-1.5" fill="currentColor" viewBox="0 0 24 24">
+            <div className="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
             </div>
-          </div>
-        ) : (
-          <div className="relative rounded-[2rem] overflow-hidden w-full aspect-video shadow-2xl">
-            <video
-              ref={videoRef}
-              src="/vertmanguinhos-novo/video.mp4"
-              className="w-full h-full object-cover"
-              onEnded={() => setPlaying(false)}
-              autoPlay
-              playsInline
-            />
-          </div>
-        )}
-      </div>
+            <div className="text-left">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 leading-none mb-1">Clique para assistir</p>
+              <p className="text-sm font-semibold tracking-wide leading-none">Reproduzir vídeo</p>
+            </div>
+          </button>
+        </div>
+      )}
+
+      {playing && (
+        <iframe
+          className="absolute inset-0 w-full h-full z-10"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )}
     </section>
   )
 }
@@ -228,20 +217,20 @@ export default function VertManguinhosNovoPage() {
         {/* Overlay gradiente esquerda → transparente para dar contraste ao texto */}
         <div className="hero-overlay absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.5) 28%, rgba(255,255,255,0.1) 42%, transparent 52%)' }} />
         {/* Conteúdo central */}
-        <div className="relative z-10 flex-1 flex items-center px-8 md:px-16 lg:px-24 pt-16">
+        <div className="relative z-10 flex-1 flex items-center px-8 md:px-16 lg:px-24 pt-14 min-h-0">
           <div className="flex flex-col leading-none gap-0 max-w-xl">
             <img
               src="/_6A6054.png"
               alt="Vert Manguinhos"
-              className="hero-logo w-auto h-36 md:h-48 lg:h-56 object-contain object-left mb-8 self-start drop-shadow-md"
+              className="hero-logo w-auto h-28 md:h-36 lg:h-44 object-contain object-left mb-5 md:mb-6 self-start drop-shadow-md"
             />
-            <span className="hero-t1 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">UM</span>
-            <span className="hero-t2 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight uppercase leading-[1.05]">REFÚGIO</span>
-            <span className="hero-t3 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">NA SUA</span>
-            <span className="hero-t4 hero-title text-[#6B6054] text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase leading-[1.05]">CASA</span>
-            <div className="hero-cta mt-10">
+            <span className="hero-t1 hero-title text-[#6B6054] text-2xl md:text-3xl lg:text-4xl font-light tracking-tight uppercase leading-[1.05]">UM</span>
+            <span className="hero-t2 hero-title text-[#6B6054] text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight uppercase leading-[1.05]">REFÚGIO</span>
+            <span className="hero-t3 hero-title text-[#6B6054] text-2xl md:text-3xl lg:text-4xl font-light tracking-tight uppercase leading-[1.05]">NA SUA</span>
+            <span className="hero-t4 hero-title text-[#6B6054] text-2xl md:text-3xl lg:text-4xl font-light tracking-tight uppercase leading-[1.05]">CASA</span>
+            <div className="hero-cta mt-6 md:mt-8">
               <a href={whatsapp} target="_blank" rel="noopener noreferrer">
-                <button className="bg-[#6B6054] text-white text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full px-10 py-5 hover:bg-[#6B6054]/85 shadow-lg shadow-[#6B6054]/30 transition-all duration-300 text-center">
+                <button className="bg-[#6B6054] text-white text-xs font-semibold tracking-[0.25em] uppercase rounded-full px-10 py-4 hover:bg-[#6B6054]/85 shadow-lg shadow-[#6B6054]/30 transition-all duration-300 text-center">
                   GARANTA SUA UNIDADE
                 </button>
               </a>
@@ -360,16 +349,21 @@ export default function VertManguinhosNovoPage() {
                 alt="Vert Manguinhos"
                 className="w-auto h-24 md:h-32 object-contain object-right mb-8 ml-auto brightness-0 invert"
               />
-              <h2 className="text-5xl md:text-7xl font-thin text-white leading-[1.05] tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-thin text-white leading-tight tracking-tight">
                 Amplo por dentro.<br />
                 Elevado por fora.<br />
                 Livre por inteiro.
               </h2>
               <div className="mt-10 flex justify-end">
-                <a href={whatsapp} target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-white text-[#1a1a14] hover:bg-[#6A6054] hover:text-white px-8 h-12 text-sm font-semibold rounded-full transition-all duration-300">
-                    Quero saber mais
-                  </Button>
+                <a href={whatsapp} target="_blank" rel="noopener noreferrer"
+                  className="group flex items-center gap-4 bg-[#6B6054] hover:bg-[#6B6054]/90 text-white px-7 py-4 rounded-xl shadow-xl shadow-[#6B6054]/30 transition-all duration-300 hover:scale-[1.03]">
+                  <div className="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                    <Play className="w-4 h-4 text-white fill-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 leading-none mb-1">Saiba mais</p>
+                    <p className="text-sm font-semibold tracking-wide leading-none">Quero conhecer</p>
+                  </div>
                 </a>
               </div>
             </div>
@@ -752,13 +746,13 @@ export default function VertManguinhosNovoPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center fi bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center fi rounded-2xl p-8 shadow-sm" style={{backgroundColor: '#6A6054'}}>
             <div className="space-y-5 order-2 lg:order-1">
-              <h3 className="text-3xl md:text-4xl font-thin text-[#1a1a14] leading-tight">
+              <h3 className="text-3xl md:text-4xl font-thin text-white leading-tight">
                 {["MINIMERCADO Autônomo","Delivery Box Refrigerado","Box Locker Privativo","Bike Point com Oficina","Carregamento Elétrico","Aquecimento Solar","Hidromassagem ou Ofurô","PetCare e LavaPatas"][selectedAmenity]}
               </h3>
-              <div className="w-10 h-0.5 bg-[#6A6054]" />
-              <p className="text-[#6A6054] text-base leading-relaxed">
+              <div className="w-10 h-0.5 bg-white/50" />
+              <p className="text-white/80 text-base leading-relaxed">
                 {["Compras rápidas sem sair do condomínio. Tecnologia autônoma 24h.","Encomendas seguras com sistema refrigerado para alimentos frescos.","Espaço privativo com porta nas garagens para guardar pertences.","Oficina completa e recarga para bicicletas elétricas no condomínio.","Estações de carregamento para veículos elétricos em todas as unidades.","Aquecimento solar central com medição individual — economia real.","Preparação para hidromassagem ou ofurô na varanda da suíte master.","Área dedicada ao seu pet: banho, cuidados e lava-patas."][selectedAmenity]}
               </p>
             </div>
@@ -844,14 +838,14 @@ export default function VertManguinhosNovoPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-14 max-w-4xl mx-auto">
             {[
-              { logo: "/logo-henrique.png", title: "Projeto Arquitetônico", name: "Henrique Gasparini" },
-              { logo: "/logo-ilha.png", title: "Projeto Estrutural", name: "Ilha Projetos / Eng. Bruno Sarcinelli" },
-              { logo: "/logo-spin.png", title: "Projeto de Instalações", name: "SPIN Projetos" },
-              { logo: "/logo-pinheiro.png", title: "Construção", name: "Pinheiro de Sá Engenharia" },
+              { logo: "/logo-henrique.png", title: "Projeto Arquitetônico", name: "Henrique Gasparini", logoStyle: {} },
+              { logo: "/logo-ilha.png", title: "Projeto Estrutural", name: "Ilha Projetos / Eng. Bruno Sarcinelli", logoStyle: {} },
+              { logo: "/logo-spin.png", title: "Projeto de Instalações", name: "SPIN Projetos", logoStyle: {} },
+              { logo: "/logo-pinheiro.png", title: "Construção", name: "Pinheiro de Sá Engenharia", logoStyle: { transform: "scale(1.6)" } },
             ].map((t, i) => (
               <div key={i} className={`fi d${i + 1} group hover:-translate-y-1 transition-all duration-500 text-center`}>
                 <div className="h-28 flex items-center justify-center mb-5 bg-white rounded-2xl border border-gray-100 p-4 group-hover:border-[#6A6054]/30 group-hover:shadow-md transition-all duration-500">
-                  <img src={t.logo} alt={t.name} className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <img src={t.logo} alt={t.name} style={t.logoStyle} className="max-h-full max-w-full object-contain transition-transform duration-500" />
                 </div>
                 <p className="text-[#6A6054] text-[9px] uppercase tracking-widest font-semibold mb-1">{t.title}</p>
                 <p className="text-[#6A6054] text-xs font-light leading-relaxed">{t.name}</p>
@@ -864,18 +858,21 @@ export default function VertManguinhosNovoPage() {
       {/* ══════════════════════════════════════
           17. PARCEIROS
       ══════════════════════════════════════ */}
-      <section className="s-dots py-20 border-t border-[#6A6054]/10">
+      <section className="s-warm py-24">
         <div className="container mx-auto px-6 md:px-10">
-          <div className="text-center mb-12 fi">
+          <div className="text-center mb-14 fi">
             <span className="text-[#6A6054] text-[10px] uppercase tracking-[0.3em] font-semibold mb-4 block">Parceiros</span>
-            <h2 className="text-3xl md:text-4xl font-thin text-[#1a1a14] mb-3">Quem faz parte desse projeto</h2>
+            <h2 className="text-4xl md:text-5xl font-thin text-[#1a1a14] mb-3">Parceiros do Empreendimento</h2>
             <div className="w-12 h-0.5 bg-[#6A6054] mx-auto mt-6" />
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {Array.from({ length: 12 }, (_, i) => (
-              <div key={i} className={`fi d${(i % 6) + 1} group bg-white rounded-xl border border-gray-100 hover:border-[#6A6054]/40 hover:shadow-md transition-all duration-500 hover:-translate-y-0.5 flex items-center justify-center p-3 min-h-[90px]`}>
-                <img src={`/PARCEIROS VERTMANGUINHOS/${i + 1}.png`} alt={`Parceiro ${i + 1}`}
-                  className="w-full object-contain max-h-[70px] group-hover:scale-105 transition-transform duration-400" />
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto items-center">
+            {[1,2,3,4,5,6,7,8,9,10,11,12].map((n, i) => (
+              <div key={n} className={`fi d${(i % 6) + 1} flex items-center justify-center bg-white border border-gray-100 hover:border-[#6A6054]/30 hover:shadow-md rounded-2xl p-4 transition-all duration-300 aspect-square`}>
+                <img
+                  src={`/PARCEIROS%20VERTMANGUINHOS/${n}.png`}
+                  alt={`Parceiro ${n}`}
+                  className="w-full h-full object-contain"
+                />
               </div>
             ))}
           </div>
@@ -926,31 +923,53 @@ export default function VertManguinhosNovoPage() {
       {/* ══════════════════════════════════════
           19. CTA FINAL
       ══════════════════════════════════════ */}
-      <section className="relative min-h-[85vh] overflow-hidden flex items-end">
+      <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
         <img src={`${B}/FACHADA%20MANHA%2003.jpg`} alt="Vert Manguinhos"
-          className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+          className="absolute inset-0 w-full h-full object-cover object-center" />
+        {/* Overlay em camadas para profundidade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
 
-        <div className="relative z-10 w-full pb-20 md:pb-28">
-          <div className="container mx-auto px-8 md:px-16 text-center">
-            <div className="fi max-w-3xl mx-auto">
-              <img src="/logo-nova-vertmanguinhos.png" alt="Vert Manguinhos"
-                className="h-16 w-auto mx-auto mb-10 drop-shadow-2xl" />
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-thin text-white mb-6 leading-tight">
-                Nosso primeiro lançamento.<br />Nossa maior declaração.
-              </h2>
-              <p className="text-white/60 font-light text-lg mb-10">
-                Breve lançamento. Unidades limitadas.
-              </p>
-              <a href={whatsapp} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#6A6054] hover:bg-[#b89851] text-white px-12 py-7 text-sm font-bold rounded-full shadow-2xl hover:shadow-[#6A6054]/40 hover:scale-105 transition-all duration-300 tracking-widest uppercase relative overflow-hidden group">
-                  <span className="relative z-10 text-xs tracking-[0.2em]">Falar com um Especialista</span>
-                  <div className="absolute inset-0 shimmer" />
-                </Button>
-              </a>
-              <p className="text-white/30 text-xs font-light mt-6 tracking-wide">Atendimento personalizado · Sem compromisso</p>
-            </div>
+        <div className="relative z-10 w-full flex flex-col items-center text-center px-6 md:px-16 py-24">
+
+          {/* Logo colada ao título */}
+          <div className="fi flex flex-col items-center gap-4 mb-8">
+            <img src="/logo-nova-vertmanguinhos.png" alt="Vert Manguinhos"
+              className="h-20 md:h-24 w-auto drop-shadow-2xl" />
+            <div className="w-px h-8 bg-white/25" />
           </div>
+
+          {/* Título menor e mais elegante */}
+          <div className="fi max-w-2xl mx-auto mb-5">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-white leading-tight tracking-tight">
+              Nosso primeiro lançamento.<br />
+              <span className="font-light italic text-white/80">Nossa maior declaração.</span>
+            </h2>
+          </div>
+
+          {/* Linha ornamental */}
+          <div className="fi flex items-center gap-5 mb-8">
+            <div className="w-16 h-px bg-[#6A6054]/70" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#6A6054]" />
+            <div className="w-16 h-px bg-[#6A6054]/70" />
+          </div>
+
+          {/* Subtítulo */}
+          <p className="fi text-white/50 font-light text-sm tracking-[0.2em] uppercase mb-10">
+            Breve lançamento &nbsp;·&nbsp; Unidades limitadas
+          </p>
+
+          {/* CTA */}
+          <div className="fi">
+            <a href={whatsapp} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-[#6A6054] hover:bg-[#6A6054]/85 text-white px-14 py-7 rounded-full shadow-2xl shadow-[#6A6054]/30 hover:shadow-[#6A6054]/50 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+                <span className="relative z-10 text-xs font-semibold tracking-[0.25em] uppercase">Falar com um Especialista</span>
+                <div className="absolute inset-0 shimmer" />
+              </Button>
+            </a>
+            <p className="text-white/25 text-[11px] font-light mt-5 tracking-widest uppercase">Atendimento personalizado · Sem compromisso</p>
+          </div>
+
         </div>
       </section>
 
