@@ -258,7 +258,7 @@ export default function VertManguinhosNovoPage() {
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              { num: "36", unit: "unidades exclusivas" },
+              { num: "37", unit: "unidades exclusivas" },
               { num: "16", unit: "andares de altitude" },
               { num: "190", unit: "m² área máxima" },
               { num: "25+", unit: "anos de arquitetura" },
@@ -683,7 +683,7 @@ export default function VertManguinhosNovoPage() {
             </div>
             <div className="grid grid-cols-2 gap-3 fi d2">
               {[
-                { num: "36", unit: "unidades residenciais" },
+                { num: "37", unit: "unidades residenciais" },
                 { num: "16", unit: "andares de altitude" },
                 { num: "190", unit: "m² área máxima" },
                 { num: "15", unit: "lojas no térreo" },
